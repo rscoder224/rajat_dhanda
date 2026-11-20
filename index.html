@@ -1,1007 +1,3469 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Meta Tags -->
-    <title>Sudha Milk Business | Quality Milk & Dairy Products</title>
-    <meta name="description" content="Sudha Milk Business in Sivaganga, Tamil Nadu, providing quality milk and dairy products with a focus on freshness, reliability and customer satisfaction.">
-    <meta name="keywords" content="Sudha Milk Business, Milk Supply Sivaganga, Dairy Products Tamil Nadu, Fresh Milk Manalur">
-    
-    <!-- Open Graph Metadata -->
-    <meta property="og:title" content="Sudha Milk Business | Quality Milk & Dairy Products">
-    <meta property="og:description" content="Providing fresh and reliable milk and dairy supply services in Manalur, Sivaganga.">
-    <meta property="og:type" content="website">
-
-    <!-- Google Fonts & Lucide Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        /* --- CSS VARIABLES & COLOR PALETTE --- */
-        :root {
-            --bg-dark: #0A110D;
-            --bg-card: #142019;
-            --brown-primary: #8B5E34;
-            --brown-light: #A06D3B;
-            --green-primary: #2E5A44;
-            --green-accent: #438260;
-            --blue-accent: #1E3A8A;
-            --blue-light: #3B82F6;
-            --text-light: #F3F4F6;
-            --text-muted: #9CA3AF;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --shadow-glow: 0 10px 30px -10px rgba(67, 130, 96, 0.3);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        /* --- BASE STYLES --- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-light);
-            line-height: 1.6;
-        }
-
-        section {
-            padding: 5rem 1.5rem;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        h1, h2, h3, h4 {
-            line-height: 1.2;
-            font-weight: 700;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        /* --- BUTTONS --- */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 0.85rem 1.75rem;
-            border-radius: 50px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            border: none;
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--green-accent), var(--green-primary));
-            color: #ffffff;
-            box-shadow: var(--shadow-glow);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            background: linear-gradient(135deg, var(--green-primary), var(--green-accent));
-        }
-
-        .btn-secondary {
-            background: rgba(255, 255, 255, 0.08);
-            color: var(--text-light);
-            border: 1px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-2px);
-        }
-
-        /* --- HEADER & NAVIGATION --- */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(10, 17, 13, 0.85);
-            backdrop-filter: blur(12px);
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .nav-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 1rem 1.5rem;
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1.35rem;
-            font-weight: 800;
-            color: var(--text-light);
-        }
-
-        .logo-icon {
-            color: var(--green-accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-muted);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--green-accent);
-        }
-
-        .hamburger {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-light);
-            cursor: pointer;
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-            padding-top: 4rem;
-            padding-bottom: 6rem;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 0.4rem 1rem;
-            border-radius: 30px;
-            background: rgba(67, 130, 96, 0.15);
-            border: 1px solid rgba(67, 130, 96, 0.3);
-            color: #55B685;
-            font-size: 0.85rem;
-            font-weight: 600;
-            margin-bottom: 1.25rem;
-        }
-
-        .hero-content h1 {
-            font-size: 3rem;
-            margin-bottom: 1.25rem;
-            background: linear-gradient(135deg, #FFFFFF, var(--text-muted));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-content p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .hero-image-wrapper {
-            position: relative;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-            border: 1px solid var(--border-color);
-        }
-
-        .hero-image-wrapper img {
-            width: 100%;
-            height: 420px;
-            object-fit: cover;
-        }
-
-        /* --- SECTION HEADINGS --- */
-        .section-header {
-            text-align: center;
-            max-width: 650px;
-            margin: 0 auto 3.5rem auto;
-        }
-
-        .section-subtitle {
-            color: var(--green-accent);
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.85rem;
-            letter-spacing: 1px;
-            margin-bottom: 0.5rem;
-        }
-
-        .section-title {
-            font-size: 2.25rem;
-            color: var(--text-light);
-        }
-
-        /* --- ABOUT SECTION --- */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3.5rem;
-            align-items: center;
-        }
-
-        .about-content p {
-            color: var(--text-muted);
-            margin-bottom: 1.25rem;
-        }
-
-        /* --- PRODUCTS / SERVICES --- */
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--bg-card);
-            border-radius: 18px;
-            border: 1px solid var(--border-color);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(67, 130, 96, 0.4);
-            box-shadow: var(--shadow-glow);
-        }
-
-        .card-img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        .card-body {
-            padding: 1.5rem;
-        }
-
-        .card-title {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-light);
-        }
-
-        .card-text {
-            color: var(--text-muted);
-            font-size: 0.925rem;
-        }
-
-        /* --- WHY CHOOSE US --- */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.75rem;
-        }
-
-        .feature-card {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .feature-card:hover {
-            background: rgba(20, 32, 25, 0.8);
-            border-color: var(--brown-primary);
-        }
-
-        .feature-icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 12px;
-            background: rgba(139, 94, 52, 0.2);
-            color: var(--brown-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.25rem;
-        }
-
-        .feature-card h3 {
-            font-size: 1.15rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-card p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-
-        /* --- CALL TO ACTION --- */
-        .cta-banner {
-            background: linear-gradient(135deg, var(--green-primary), var(--bg-card));
-            border-radius: 24px;
-            padding: 4rem 2rem;
-            text-align: center;
-            border: 1px solid rgba(67, 130, 96, 0.3);
-            margin: 3rem auto;
-        }
-
-        .cta-banner h2 {
-            font-size: 2.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .cta-banner p {
-            color: var(--text-muted);
-            margin-bottom: 2rem;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* --- CONTACT SECTION --- */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: start;
-        }
-
-        .contact-card {
-            background: var(--bg-card);
-            border-radius: 20px;
-            padding: 2.5rem;
-            border: 1px solid var(--border-color);
-        }
-
-        .info-item {
-            display: flex;
-            gap: 1.25rem;
-            margin-bottom: 1.75rem;
-        }
-
-        .info-icon {
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            background: rgba(67, 130, 96, 0.15);
-            color: var(--green-accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .info-text h4 {
-            font-size: 1rem;
-            color: var(--text-light);
-            margin-bottom: 0.25rem;
-        }
-
-        .info-text p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        .contact-actions {
-            display: flex;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            background: #060B08;
-            border-top: 1px solid var(--border-color);
-            padding-top: 4rem;
-            padding-bottom: 2rem;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1.5fr 1fr;
-            gap: 3rem;
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 1.5rem 3rem 1.5rem;
-        }
-
-        .footer-col h4 {
-            font-size: 1.1rem;
-            margin-bottom: 1.25rem;
-            color: var(--text-light);
-        }
-
-        .footer-col p, .footer-col li {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .footer-links a {
-            transition: var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--green-accent);
-        }
-
-        .footer-bottom {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem 0 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        /* --- MODAL SYSTEM --- */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            backdrop-filter: blur(5px);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: var(--transition);
-            padding: 1.5rem;
-        }
-
-        .modal-overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .modal-box {
-            background: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 20px;
-            max-width: 700px;
-            width: 100%;
-            max-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
-        }
-
-        .modal-header {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .modal-close {
-            background: none;
-            border: none;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .modal-close:hover {
-            color: var(--text-light);
-        }
-
-        .modal-body {
-            padding: 1.5rem;
-            overflow-y: auto;
-            font-size: 0.925rem;
-            color: var(--text-muted);
-        }
-
-        .modal-body h4 {
-            color: var(--text-light);
-            margin: 1rem 0 0.4rem 0;
-        }
-
-        /* --- COOKIE CONSENT BANNER --- */
-        .cookie-banner {
-            position: fixed;
-            bottom: 1.5rem;
-            left: 1.5rem;
-            right: 1.5rem;
-            max-width: 500px;
-            background: rgba(20, 32, 25, 0.95);
-            border: 1px solid var(--green-accent);
-            border-radius: 16px;
-            padding: 1.25rem;
-            z-index: 900;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            transform: translateY(150%);
-            transition: transform 0.4s ease;
-        }
-
-        .cookie-banner.show {
-            transform: translateY(0);
-        }
-
-        .cookie-banner p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-        }
-
-        .cookie-btns {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-        }
-
-        .cookie-btns .btn {
-            padding: 0.5rem 1rem;
-            font-size: 0.8rem;
-        }
-
-        /* --- RESPONSIVE STYLES --- */
-        @media (max-width: 992px) {
-            .hero, .about-grid, .contact-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hamburger {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background: var(--bg-dark);
-                flex-direction: column;
-                padding: 2rem;
-                border-bottom: 1px solid var(--border-color);
-                clip-path: circle(0% at 100% 0);
-                transition: clip-path 0.4s ease-in-out;
-            }
-
-            .nav-links.active {
-                clip-path: circle(140% at 100% 0);
-            }
-
-            .hero-content h1 {
-                font-size: 2.25rem;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Primary SEO Meta Tags -->
+  <title>KATIHA JI PHARMA | Trusted Pharmacy Business in Bareilly, Uttar Pradesh</title>
+  <meta name="description" content="KATIHA JI PHARMA is a registered proprietorship pharmaceutical business in Bareilly, Uttar Pradesh (GSTIN: 09AGVPK9704G1ZT). Contact Satya Bhan Katiha at 322, Katiha Chowk, Gulab Nagar, Bareilly." />
+  <meta name="keywords" content="KATIHA JI PHARMA, Pharmacy in Bareilly, KATIHA JI PHARMA Bareilly, Pharmaceutical Business Bareilly, Pharmacy Bareilly Uttar Pradesh, Satya Bhan Katiha, Katiha Chowk Gulab Nagar Bareilly" />
+  <meta name="author" content="KATIHA JI PHARMA - SATYA BHAN KATIHA" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.katihajipharma.example.com/" />
+
+  <!-- Open Graph / Social Media Metadata -->
+  <meta property="og:type" content="business.business" />
+  <meta property="og:title" content="KATIHA JI PHARMA | Trusted Pharmacy Partner in Bareilly" />
+  <meta property="og:description" content="Registered proprietorship pharmaceutical business located at 322, Katiha Chowk, Gulab Nagar, Bareilly, Uttar Pradesh – 243003." />
+  <meta property="og:url" content="https://www.katihajipharma.example.com/" />
+  <meta property="og:site_name" content="KATIHA JI PHARMA" />
+  <meta property="og:locale" content="en_IN" />
+
+  <!-- Twitter Card Metadata -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="KATIHA JI PHARMA | Pharmacy Business in Bareilly, UP" />
+  <meta name="twitter:description" content="Committed to professionalism, reliability, and customer-focused pharmaceutical services in Bareilly, Uttar Pradesh." />
+
+  <!-- Inline SVG Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23087F5B'/%3E%3Cpath d='M26 14h12v12h12v12H38v12H26V38H14V26h12V14z' fill='%23ffffff'/%3E%3C/svg%3E" />
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 Free CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Structured Data (JSON-LD) - Strictly Verified Business Facts Only -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Pharmacy",
+    "name": "KATIHA JI PHARMA",
+    "legalName": "SATYA BHAN KATIHA",
+    "description": "KATIHA JI PHARMA is a registered proprietorship pharmaceutical business committed to professionalism, reliability, and customer-focused pharmaceutical services in Bareilly, Uttar Pradesh.",
+    "taxID": "09AGVPK9704G1ZT",
+    "vatID": "09AGVPK9704G1ZT",
+    "telephone": "+91-8881063439",
+    "email": "main@rajatdhanda.online",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "322, KATIHA CHOWK, GULAB NAGAR",
+      "addressLocality": "Bareilly",
+      "addressRegion": "Uttar Pradesh",
+      "postalCode": "243003",
+      "addressCountry": "IN"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Bareilly"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "SATYA BHAN KATIHA"
+    }
+  }
+  </script>
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS & CSS CUSTOM PROPERTIES
+       ========================================================================== */
+    :root {
+      --color-primary: #087F5B;
+      --color-primary-hover: #066649;
+      --color-primary-light: #E6F4F0;
+      --color-secondary: #0F766E;
+      --color-secondary-light: #CCFBF1;
+      --color-dark: #12352D;
+      --color-dark-surface: #18443A;
+      --color-bg-light: #F5FAF8;
+      --color-white: #FFFFFF;
+      --color-text: #24332F;
+      --color-muted: #71817A;
+      --color-border: #DCE7E3;
+      --color-border-strong: #C2D6CF;
+      --color-danger: #DC2626;
+      --color-danger-bg: #FEF2F2;
+      --color-warning: #B45309;
+      --color-warning-bg: #FFFBEB;
+
+      --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      --shadow-xs: 0 1px 2px rgba(18, 53, 45, 0.05);
+      --shadow-sm: 0 4px 12px rgba(18, 53, 45, 0.06);
+      --shadow-md: 0 10px 28px rgba(18, 53, 45, 0.08);
+      --shadow-lg: 0 20px 45px rgba(18, 53, 45, 0.12);
+
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+
+      --container-max: 1240px;
+      --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-smooth: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ==========================================================================
+       2. RESET, BASE TYPOGRAPHY & ACCESSIBILITY
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background-color: var(--color-white);
+      line-height: 1.65;
+      overflow-x: hidden;
+      max-width: 100%;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body.modal-open,
+    body.menu-open {
+      overflow: hidden;
+    }
+
+    img, svg, iframe {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    button, input, textarea, select {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    /* Skip to Main Content Link for Keyboard Accessibility */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 12px 20px;
+      border-radius: var(--radius-sm);
+      z-index: 9999;
+      font-weight: 600;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 16px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-heading);
+      color: var(--color-dark);
+      line-height: 1.22;
+      letter-spacing: -0.02em;
+    }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-inline: auto;
+      padding-inline: clamp(1rem, 4vw, 2rem);
+    }
+
+    .section {
+      padding-block: clamp(3.75rem, 7vw, 6rem);
+      position: relative;
+    }
+
+    .section-light {
+      background-color: var(--color-bg-light);
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 740px;
+      margin-inline: auto;
+      margin-bottom: clamp(2.25rem, 4.5vw, 3.5rem);
+    }
+
+    .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-primary);
+      background: var(--color-primary-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+      font-weight: 800;
+      color: var(--color-dark);
+      margin-bottom: 14px;
+    }
+
+    .section-subtitle {
+      font-size: clamp(0.975rem, 1.5vw, 1.075rem);
+      color: var(--color-muted);
+      line-height: 1.7;
+    }
+
+    /* ==========================================================================
+       3. BUTTONS & INTERACTIVE CONTROLS
+       ========================================================================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0.85rem 1.65rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      border-radius: var(--radius-md);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      min-height: 48px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-white);
+      box-shadow: 0 6px 18px rgba(8, 127, 91, 0.24);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(8, 127, 91, 0.34);
+      filter: brightness(1.04);
+    }
+
+    .btn-secondary {
+      background: var(--color-white);
+      color: var(--color-dark);
+      border-color: var(--color-border-strong);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      background: var(--color-bg-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-light {
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--color-white);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+
+    .btn-outline-light:hover {
+      background: var(--color-white);
+      color: var(--color-dark);
+    }
+
+    .btn-sm {
+      padding: 0.55rem 1.1rem;
+      font-size: 0.85rem;
+      min-height: 38px;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ==========================================================================
+       4. TOP INFORMATION BAR
+       ========================================================================== */
+    .top-bar {
+      background-color: var(--color-dark);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 0.8125rem;
+      padding-block: 9px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px 20px;
+    }
+
+    .top-bar-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px 20px;
+    }
+
+    .top-bar-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: rgba(255, 255, 255, 0.9);
+      padding-block: 2px;
+    }
+
+    .top-bar-item i {
+      color: #5EEAD4;
+      font-size: 0.82rem;
+    }
+
+    a.top-bar-item:hover {
+      color: #5EEAD4;
+    }
+
+    .top-bar-gst {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      color: #CCFBF1;
+    }
+
+    /* ==========================================================================
+       5. STICKY NAVIGATION BAR & MOBILE MENU
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background-color: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      transition: box-shadow var(--transition-fast), background-color var(--transition-fast);
+    }
+
+    .navbar.scrolled {
+      box-shadow: var(--shadow-sm);
+      background-color: rgba(255, 255, 255, 0.99);
+    }
+
+    .navbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+      gap: 16px;
+    }
+
+    /* Custom Brand Logo */
+    .brand-logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .brand-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(8, 127, 91, 0.25);
+      flex-shrink: 0;
+    }
+
+    .brand-text-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .brand-name {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: clamp(1.05rem, 2vw, 1.25rem);
+      color: var(--color-dark);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+
+    .brand-tagline {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--color-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: clamp(14px, 2.2vw, 28px);
+    }
+
+    .nav-link {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--color-text);
+      padding-block: 8px;
+      position: relative;
+      white-space: nowrap;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2.5px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      transition: width var(--transition-fast);
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-primary);
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .hamburger-btn {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      border: 1.5px solid var(--color-border);
+      background: var(--color-white);
+      color: var(--color-dark);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: all var(--transition-fast);
+    }
+
+    .hamburger-btn:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      background: var(--color-bg-light);
+    }
+
+    /* Mobile Drawer & Backdrop */
+    .mobile-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 53, 45, 0.52);
+      backdrop-filter: blur(3px);
+      z-index: 1050;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--transition-smooth), visibility var(--transition-smooth);
+    }
+
+    .mobile-backdrop.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: min(85vw, 340px);
+      height: 100dvh;
+      background: var(--color-white);
+      z-index: 1100;
+      padding: 20px 24px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transform: translateX(100%);
+      transition: transform var(--transition-smooth);
+      box-shadow: -10px 0 35px rgba(18, 53, 45, 0.16);
+      overflow-y: auto;
+    }
+
+    .mobile-drawer.open {
+      transform: translateX(0);
+    }
+
+    .mobile-drawer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--color-border);
+      margin-bottom: 20px;
+    }
+
+    .mobile-close-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-light);
+      color: var(--color-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+    }
+
+    .mobile-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .mobile-nav-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 13px 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--color-dark);
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .mobile-nav-link:hover,
+    .mobile-nav-link.active {
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+    }
+
+    .mobile-drawer-footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .mobile-contact-snippet {
+      font-size: 0.84rem;
+      color: var(--color-muted);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    /* ==========================================================================
+       6. HERO SECTION
+       ========================================================================== */
+    .hero {
+      position: relative;
+      padding-block: clamp(3.5rem, 7vw, 6.25rem);
+      background:
+        radial-gradient(circle at 88% 15%, rgba(15, 118, 110, 0.11) 0%, transparent 45%),
+        radial-gradient(circle at 8% 85%, rgba(8, 127, 91, 0.09) 0%, transparent 45%),
+        linear-gradient(180deg, #F3FAF7 0%, #FFFFFF 100%);
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: clamp(2rem, 5vw, 4rem);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border-strong);
+      padding: 7px 15px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      box-shadow: var(--shadow-xs);
+      margin-bottom: 20px;
+    }
+
+    .hero-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--color-primary);
+    }
+
+    .hero-title {
+      font-size: clamp(2.15rem, 4.4vw, 3.45rem);
+      font-weight: 800;
+      color: var(--color-dark);
+      line-height: 1.14;
+      margin-bottom: 20px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-description {
+      font-size: clamp(1.02rem, 1.6vw, 1.16rem);
+      color: var(--color-muted);
+      max-width: 580px;
+      margin-bottom: 30px;
+      line-height: 1.72;
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .hero-trust-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+      padding-top: 24px;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .trust-pill {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .trust-pill-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: var(--radius-sm);
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .trust-pill-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.86rem;
+      color: var(--color-dark);
+      display: block;
+    }
+
+    .trust-pill-sub {
+      font-size: 0.78rem;
+      color: var(--color-muted);
+      display: block;
+    }
+
+    /* Hero Visual Card */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-image-card {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 6px solid var(--color-white);
+      background: var(--color-primary-light);
+    }
+
+    .hero-image-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3.4;
+      object-fit: cover;
+    }
+
+    .hero-floating-card {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .floating-card-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .floating-card-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .floating-card-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--color-dark);
+    }
+
+    .floating-card-sub {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+    }
+
+    /* ==========================================================================
+       7. ABOUT US SECTION
+       ========================================================================== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      align-items: center;
+      gap: clamp(2rem, 5vw, 4.25rem);
+    }
+
+    .about-media {
+      position: relative;
+    }
+
+    .about-img-wrap {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--color-border);
+      background: var(--color-bg-light);
+    }
+
+    .about-img-wrap img {
+      width: 100%;
+      aspect-ratio: 4 / 3.5;
+      object-fit: cover;
+    }
+
+    .about-proprietor-card {
+      margin-top: -34px;
+      margin-inline: 18px;
+      position: relative;
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .about-proprietor-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5EEAD4;
+      font-weight: 700;
+    }
+
+    .about-proprietor-name {
+      font-family: var(--font-heading);
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--color-white);
+    }
+
+    .about-constitution-tag {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #CCFBF1;
+    }
+
+    .about-content h2 {
+      font-size: clamp(1.75rem, 3.2vw, 2.35rem);
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: var(--color-text);
+      margin-bottom: 16px;
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 24px;
+      margin-bottom: 28px;
+    }
+
+    .about-highlight-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 14px;
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-dark);
+    }
+
+    .about-highlight-item i {
+      color: var(--color-primary);
+      font-size: 1rem;
+    }
+
+    /* ==========================================================================
+       8. OUR SERVICES SECTION
+       ========================================================================== */
+    .service-notice {
+      max-width: 780px;
+      margin: -1.5rem auto 2.5rem;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-left: 4px solid var(--color-secondary);
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      font-size: 0.86rem;
+      color: var(--color-muted);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .service-notice i {
+      color: var(--color-secondary);
+      margin-top: 3px;
+    }
+
+    .cards-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 30px 26px;
+      box-shadow: var(--shadow-xs);
+      transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-fast);
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-primary);
+    }
+
+    .card-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--color-primary-light), #E0F5F2);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      margin-bottom: 20px;
+      transition: background var(--transition-fast), color var(--transition-fast);
+    }
+
+    .service-card:hover .card-icon-box {
+      background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+      color: var(--color-white);
+    }
+
+    .service-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+
+    .service-card p {
+      font-size: 0.94rem;
+      color: var(--color-muted);
+      line-height: 1.68;
+      flex-grow: 1;
+    }
+
+    /* ==========================================================================
+       9. WHY CHOOSE US SECTION
+       ========================================================================== */
+    .why-card {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: all var(--transition-smooth);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .why-card:hover {
+      background: var(--color-white);
+      border-color: var(--color-secondary);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+
+    .why-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .why-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 12px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      color: var(--color-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+      box-shadow: var(--shadow-xs);
+    }
+
+    .why-card:hover .why-icon {
+      background: var(--color-secondary);
+      color: var(--color-white);
+      border-color: var(--color-secondary);
+    }
+
+    .why-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--color-dark);
+    }
+
+    .why-card p {
+      font-size: 0.92rem;
+      color: var(--color-muted);
+      line-height: 1.65;
+    }
+
+    /* ==========================================================================
+       10. BUSINESS INFORMATION PROFILE SECTION
+       ========================================================================== */
+    .profile-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border-strong);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      max-width: 980px;
+      margin-inline: auto;
+    }
+
+    .profile-card-banner {
+      background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-surface) 100%);
+      color: var(--color-white);
+      padding: clamp(1.5rem, 3vw, 2.25rem) clamp(1.5rem, 4vw, 2.75rem);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .profile-banner-title {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      font-weight: 800;
+      color: var(--color-white);
+      margin-bottom: 4px;
+    }
+
+    .profile-banner-sub {
+      font-size: 0.88rem;
+      color: #CCFBF1;
+    }
+
+    .verified-status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(94, 234, 212, 0.16);
+      border: 1px solid rgba(94, 234, 212, 0.4);
+      color: #5EEAD4;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1px;
+      background: var(--color-border);
+    }
+
+    .profile-field {
+      background: var(--color-white);
+      padding: clamp(1.25rem, 2.5vw, 1.75rem) clamp(1.25rem, 3vw, 2.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .profile-field.full-span {
+      grid-column: 1 / -1;
+    }
+
+    .profile-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-muted);
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .profile-label i {
+      color: var(--color-primary);
+    }
+
+    .profile-value-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .profile-value {
+      font-family: var(--font-heading);
+      font-size: clamp(1rem, 1.8vw, 1.16rem);
+      font-weight: 700;
+      color: var(--color-dark);
+      word-break: break-word;
+    }
+
+    .gstin-mono {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      letter-spacing: 0.05em;
+      background: var(--color-bg-light);
+      padding: 4px 10px;
+      border-radius: 6px;
+      border: 1px solid var(--color-border);
+      color: var(--color-primary);
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--color-primary);
+      background: var(--color-primary-light);
+      border: 1px solid transparent;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .copy-btn:hover {
+      background: var(--color-primary);
+      color: var(--color-white);
+    }
+
+    /* ==========================================================================
+       11. LOCATION & GOOGLE MAPS SECTION
+       ========================================================================== */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(1.75rem, 4vw, 3rem);
+      align-items: stretch;
+    }
+
+    .location-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.75rem, 3.5vw, 2.5rem);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .location-pin-badge {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .location-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .location-address-box {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      margin-block: 16px;
+    }
+
+    .location-address-box p {
+      font-weight: 600;
+      color: var(--color-dark);
+      line-height: 1.65;
+    }
+
+    .location-meta-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 0.92rem;
+      color: var(--color-muted);
+    }
+
+    .location-meta-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .location-meta-list i {
+      color: var(--color-secondary);
+      width: 18px;
+      text-align: center;
+    }
+
+    .map-container {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      border: 1px solid var(--color-border);
+      box-shadow: var(--shadow-sm);
+      min-height: 360px;
+      background: var(--color-bg-light);
+      position: relative;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 360px;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       12. CONTACT SECTION & INTERACTIVE FORM
+       ========================================================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: clamp(2rem, 4.5vw, 3.5rem);
+      align-items: start;
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .contact-method-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: 20px 22px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      box-shadow: var(--shadow-xs);
+      transition: all var(--transition-fast);
+    }
+
+    .contact-method-card:hover {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+
+    .contact-method-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--color-primary-light);
+      color: var(--color-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    .contact-method-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--color-muted);
+      margin-bottom: 3px;
+    }
+
+    .contact-method-value {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--color-dark);
+      word-break: break-word;
+    }
+
+    .contact-method-value a:hover {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+
+    .contact-method-action {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--color-primary);
+    }
+
+    /* Contact Form Card */
+    .contact-form-card {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: clamp(1.75rem, 3.5vw, 2.75rem);
+      box-shadow: var(--shadow-md);
+    }
+
+    .contact-form-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-sub {
+      font-size: 0.92rem;
+      color: var(--color-muted);
+      margin-bottom: 24px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-dark);
+      margin-bottom: 7px;
+    }
+
+    .form-label span {
+      color: var(--color-danger);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1.5px solid var(--color-border-strong);
+      border-radius: var(--radius-sm);
+      background: var(--color-white);
+      color: var(--color-text);
+      font-size: 0.95rem;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      box-shadow: 0 0 0 3.5px rgba(8, 127, 91, 0.14);
+    }
+
+    .form-control.invalid {
+      border-color: var(--color-danger);
+      background: var(--color-danger-bg);
+    }
+
+    .field-error {
+      display: none;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--color-danger);
+      margin-top: 5px;
+    }
+
+    .form-group.has-error .field-error {
+      display: block;
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .form-disclaimer-note {
+      font-size: 0.8rem;
+      color: var(--color-muted);
+      margin-bottom: 18px;
+      line-height: 1.55;
+    }
+
+    .form-feedback {
+      display: none;
+      margin-top: 20px;
+      padding: 18px 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    .form-feedback.show {
+      display: block;
+    }
+
+    .form-feedback.success {
+      background: var(--color-primary-light);
+      border: 1px solid #99E2CE;
+      color: var(--color-dark);
+    }
+
+    .form-feedback.error {
+      background: var(--color-danger-bg);
+      border: 1px solid #FECACA;
+      color: #991B1B;
+    }
+
+    .feedback-title {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .backend-notice-box {
+      margin-top: 12px;
+      padding: 12px 14px;
+      background: var(--color-white);
+      border: 1px solid var(--color-border-strong);
+      border-radius: var(--radius-sm);
+      font-size: 0.84rem;
+      color: var(--color-text);
+    }
+
+    /* ==========================================================================
+       13. FAQ ACCORDION SECTION
+       ========================================================================== */
+    .faq-list {
+      max-width: 840px;
+      margin-inline: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .faq-item {
+      background: var(--color-white);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: border-color var(--transition-fast);
+    }
+
+    .faq-item.active {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-xs);
+    }
+
+    .faq-question {
+      width: 100%;
+      text-align: left;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--color-dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+    }
+
+    .faq-question i {
+      color: var(--color-primary);
+      transition: transform var(--transition-fast);
+      flex-shrink: 0;
+    }
+
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding: 0 24px 20px;
+      color: var(--color-muted);
+      font-size: 0.94rem;
+      line-height: 1.7;
+      border-top: 1px solid var(--color-bg-light);
+      padding-top: 14px;
+    }
+
+    /* ==========================================================================
+       14. MULTI-COLUMN FOOTER
+       ========================================================================== */
+    .footer {
+      background-color: var(--color-dark);
+      color: rgba(255, 255, 255, 0.85);
+      padding-top: clamp(3.5rem, 6vw, 5rem);
+      padding-bottom: 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr 1.15fr 0.85fr;
+      gap: clamp(2rem, 4vw, 3rem);
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    }
+
+    .footer-brand-name {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      color: var(--color-white);
+    }
+
+    .footer-brand-sub {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #5EEAD4;
+      font-weight: 600;
+    }
+
+    .footer-desc {
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+    }
+
+    .footer-gst-pill {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 6px 12px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #CCFBF1;
+    }
+
+    .footer-heading {
+      font-family: var(--font-heading);
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--color-white);
+      margin-bottom: 18px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      font-size: 0.92rem;
+    }
+
+    .footer-links a,
+    .footer-legal-btn {
+      color: rgba(255, 255, 255, 0.78);
+      background: none;
+      border: none;
+      padding: 0;
+      text-align: left;
+      cursor: pointer;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color var(--transition-fast);
+    }
+
+    .footer-links a:hover,
+    .footer-legal-btn:hover {
+      color: #5EEAD4;
+    }
+
+    .footer-contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+
+    .footer-contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.55;
+    }
+
+    .footer-contact-list i {
+      color: #5EEAD4;
+      margin-top: 4px;
+      width: 16px;
+      flex-shrink: 0;
+    }
+
+    .footer-contact-list a:hover {
+      color: #5EEAD4;
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.68);
+    }
+
+    /* ==========================================================================
+       15. LEGAL DOCUMENTS MODAL (PRIVACY POLICY, TERMS, DISCLAIMER)
+       ========================================================================== */
+    .legal-modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(18, 53, 45, 0.68);
+      backdrop-filter: blur(5px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: clamp(12px, 3vw, 28px);
+    }
+
+    .legal-modal-overlay.open {
+      display: flex;
+    }
+
+    .legal-modal-box {
+      background: var(--color-white);
+      width: 100%;
+      max-width: 880px;
+      max-height: 90dvh;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      animation: modalPop 0.25s ease-out;
+    }
+
+    @keyframes modalPop {
+      from { opacity: 0; transform: translateY(14px) scale(0.98); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    .legal-modal-header {
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 20px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .legal-modal-title-group h2 {
+      color: var(--color-white);
+      font-size: clamp(1.2rem, 2.4vw, 1.5rem);
+      margin-bottom: 3px;
+    }
+
+    .legal-modal-title-group p {
+      font-size: 0.8rem;
+      color: #CCFBF1;
+    }
+
+    .legal-modal-close {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--color-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+
+    .legal-modal-close:hover {
+      background: var(--color-primary);
+    }
+
+    .legal-modal-tabs {
+      display: flex;
+      background: var(--color-bg-light);
+      border-bottom: 1px solid var(--color-border);
+      padding-inline: 20px;
+      gap: 8px;
+      overflow-x: auto;
+    }
+
+    .legal-tab-btn {
+      padding: 13px 16px;
+      background: none;
+      border: none;
+      border-bottom: 3px solid transparent;
+      font-weight: 600;
+      font-size: 0.88rem;
+      color: var(--color-muted);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .legal-tab-btn.active {
+      color: var(--color-primary);
+      border-bottom-color: var(--color-primary);
+    }
+
+    .legal-modal-body {
+      padding: clamp(1.5rem, 3vw, 2.5rem);
+      overflow-y: auto;
+      line-height: 1.72;
+      color: var(--color-text);
+    }
+
+    .legal-doc-section {
+      display: none;
+    }
+
+    .legal-doc-section.active {
+      display: block;
+    }
+
+    .legal-doc-section h3 {
+      font-size: 1.12rem;
+      color: var(--color-dark);
+      margin-top: 22px;
+      margin-bottom: 8px;
+    }
+
+    .legal-doc-section h3:first-of-type {
+      margin-top: 8px;
+    }
+
+    .legal-doc-section p {
+      margin-bottom: 12px;
+      font-size: 0.94rem;
+    }
+
+    .legal-doc-section ul {
+      margin-left: 20px;
+      margin-bottom: 14px;
+      font-size: 0.94rem;
+    }
+
+    .legal-doc-section li {
+      margin-bottom: 6px;
+    }
+
+    .legal-contact-card {
+      background: var(--color-bg-light);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      margin-top: 12px;
+      font-size: 0.92rem;
+    }
+
+    .legal-modal-footer {
+      padding: 14px 26px;
+      border-top: 1px solid var(--color-border);
+      background: var(--color-bg-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* ==========================================================================
+       16. BACK TO TOP & SCROLL REVEAL UTILITIES
+       ========================================================================== */
+    .back-to-top {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: var(--color-white);
+      border: none;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 950;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px);
+      transition: all var(--transition-fast);
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--color-dark);
+      transform: translateY(-3px);
+    }
+
+    .toast-notification {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--color-dark);
+      color: var(--color-white);
+      padding: 11px 20px;
+      border-radius: var(--radius-full);
+      font-size: 0.88rem;
+      font-weight: 600;
+      box-shadow: var(--shadow-md);
+      z-index: 3000;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.25s ease;
+    }
+
+    .toast-notification.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* Scroll Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    /* ==========================================================================
+       17. RESPONSIVE BREAKPOINTS (320px MOBILE TO 1920px DESKTOP)
+       ========================================================================== */
+    @media (max-width: 1060px) {
+      .nav-links,
+      .nav-desktop-cta {
+        display: none;
+      }
+      .hamburger-btn {
+        display: flex;
+      }
+      .hero-grid,
+      .about-grid,
+      .location-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .cards-grid-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .top-bar-gst {
+        display: none;
+      }
+      .hero-trust-strip {
+        grid-template-columns: 1fr;
+      }
+      .cards-grid-3,
+      .about-highlights,
+      .profile-grid,
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .hero-floating-card {
+        position: static;
+        margin-top: -12px;
+        border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+      }
+      .hero-image-card {
+        border-width: 3px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 400px) {
+      .top-bar-inner {
+        justify-content: center;
+        text-align: center;
+      }
+      .hero-cta-group .btn {
+        width: 100%;
+      }
+      .brand-name {
+        font-size: 1rem;
+      }
+      .brand-icon {
+        width: 36px;
+        height: 36px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- HEADER / NAVIGATION -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <i data-lucide="milk" class="logo-icon"></i>
-                Sudha Milk Business
+  <!-- ========================================================================
+       A. TOP INFORMATION BAR
+       ======================================================================== -->
+  <div class="top-bar" role="region" aria-label="Business Contact Quick Info">
+    <div class="container top-bar-inner">
+      <div class="top-bar-group">
+        <span class="top-bar-item">
+          <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+          <span>Bareilly, Uttar Pradesh, India</span>
+        </span>
+        <a href="tel:8881063439" class="top-bar-item" aria-label="Call KATIHA JI PHARMA at 8881063439">
+          <i class="fa-solid fa-phone" aria-hidden="true"></i>
+          <span>8881063439</span>
+        </a>
+        <a href="mailto:main@rajatdhanda.online" class="top-bar-item" aria-label="Email KATIHA JI PHARMA at main@rajatdhanda.online">
+          <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+          <span>main@rajatdhanda.online</span>
+        </a>
+      </div>
+      <div class="top-bar-gst" title="Goods and Services Tax Identification Number">
+        GSTIN: 09AGVPK9704G1ZT
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       B. STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <!-- Brand Logo (Custom SVG Emblem + Exact Business Name) -->
+      <a href="#home" class="brand-logo" aria-label="KATIHA JI PHARMA Home">
+        <div class="brand-icon" aria-hidden="true">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9.5 3.5C9.5 2.94772 9.94772 2.5 10.5 2.5H13.5C14.0523 2.5 14.5 2.94772 14.5 3.5V9.5H20.5C21.0523 9.5 21.5 9.94772 21.5 10.5V13.5C21.5 14.0523 21.0523 14.5 20.5 14.5H14.5V20.5C14.5 21.0523 14.0523 21.5 13.5 21.5H10.5C9.94772 21.5 9.5 21.0523 9.5 20.5V14.5H3.5C2.94772 14.5 2.5 14.0523 2.5 13.5V10.5C2.5 9.94772 2.94772 9.5 3.5 9.5H9.5V3.5Z" fill="white"/>
+            <circle cx="12" cy="12" r="2.2" fill="#087F5B"/>
+          </svg>
+        </div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">KATIHA JI PHARMA</span>
+          <span class="brand-tagline">Bareilly • Pharmaceutical Business</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-choose-us" class="nav-link">Why Choose Us</a></li>
+          <li><a href="#business-info" class="nav-link">Business Information</a></li>
+          <li><a href="#contact" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA & Mobile Menu Toggle -->
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-primary btn-sm nav-desktop-cta">
+          <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          <span>Contact Us</span>
+        </a>
+        <button type="button" class="hamburger-btn" id="mobileMenuOpen" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileDrawer">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer & Overlay -->
+  <div class="mobile-backdrop" id="mobileBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation Menu" aria-hidden="true">
+    <div>
+      <div class="mobile-drawer-header">
+        <span class="brand-name" style="font-size: 1.05rem;">KATIHA JI PHARMA</span>
+        <button type="button" class="mobile-close-btn" id="mobileMenuClose" aria-label="Close navigation menu">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link"><span>Home</span><i class="fa-solid fa-chevron-right"></i></a></li>
+        <li><a href="#about" class="mobile-nav-link"><span>About Us</span><i class="fa-solid fa-chevron-right"></i></a></li>
+        <li><a href="#services" class="mobile-nav-link"><span>Services</span><i class="fa-solid fa-chevron-right"></i></a></li>
+        <li><a href="#why-choose-us" class="mobile-nav-link"><span>Why Choose Us</span><i class="fa-solid fa-chevron-right"></i></a></li>
+        <li><a href="#business-info" class="mobile-nav-link"><span>Business Information</span><i class="fa-solid fa-chevron-right"></i></a></li>
+        <li><a href="#location" class="mobile-nav-link"><span>Location &amp; Map</span><i class="fa-solid fa-chevron-right"></i></a></li>
+        <li><a href="#contact" class="mobile-nav-link"><span>Contact Us</span><i class="fa-solid fa-chevron-right"></i></a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="#contact" class="btn btn-primary mobile-nav-link-cta" style="width: 100%;">
+        <i class="fa-solid fa-phone-volume"></i>
+        <span>Contact Our Business</span>
+      </a>
+      <div class="mobile-contact-snippet">
+        <span><strong>Phone:</strong> <a href="tel:8881063439">8881063439</a></span>
+        <span><strong>Email:</strong> <a href="mailto:main@rajatdhanda.online">main@rajatdhanda.online</a></span>
+        <span><strong>GSTIN:</strong> 09AGVPK9704G1ZT</span>
+      </div>
+    </div>
+  </aside>
+
+  <main id="main-content">
+    <!-- ======================================================================
+         C. HERO SECTION
+         ====================================================================== -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <div class="hero-badge">
+            <span class="hero-badge-dot" aria-hidden="true"></span>
+            <span>Registered Proprietorship • Bareilly, Uttar Pradesh</span>
+          </div>
+          <h1 class="hero-title">
+            Your Trusted <span>Pharmacy Partner</span> in Bareilly
+          </h1>
+          <p class="hero-description">
+            <strong>KATIHA JI PHARMA</strong> is committed to professionalism, reliability, and customer-focused pharmaceutical services. Serving customers, healthcare consumers, and business partners from Gulab Nagar, Bareilly with verified business integrity.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary">
+              <i class="fa-solid fa-headset" aria-hidden="true"></i>
+              <span>Contact Our Business</span>
             </a>
-            <button class="hamburger" id="hamburger-btn" aria-label="Toggle Navigation">
-                <i data-lucide="menu"></i>
+            <a href="#services" class="btn btn-secondary">
+              <i class="fa-solid fa-briefcase-medical" aria-hidden="true"></i>
+              <span>Explore Our Services</span>
+            </a>
+          </div>
+
+          <div class="hero-trust-strip">
+            <div class="trust-pill">
+              <div class="trust-pill-icon" aria-hidden="true"><i class="fa-solid fa-building-shield"></i></div>
+              <div>
+                <span class="trust-pill-title">Proprietorship</span>
+                <span class="trust-pill-sub">Satya Bhan Katiha</span>
+              </div>
+            </div>
+            <div class="trust-pill">
+              <div class="trust-pill-icon" aria-hidden="true"><i class="fa-solid fa-file-invoice"></i></div>
+              <div>
+                <span class="trust-pill-title">GST Registered</span>
+                <span class="trust-pill-sub">09AGVPK9704G1ZT</span>
+              </div>
+            </div>
+            <div class="trust-pill">
+              <div class="trust-pill-icon" aria-hidden="true"><i class="fa-solid fa-location-crosshairs"></i></div>
+              <div>
+                <span class="trust-pill-title">Katiha Chowk</span>
+                <span class="trust-pill-sub">Gulab Nagar, Bareilly</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="hero-image-card">
+            <img
+              src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=1000&q=80"
+              alt="Clean modern pharmaceutical shelves and healthcare supplies representing KATIHA JI PHARMA"
+              loading="eager"
+              onerror="this.src='https://placehold.co/800x680/087F5B/FFFFFF?text=KATIHA+JI+PHARMA'"
+            />
+            <div class="hero-floating-card">
+              <div class="floating-card-left">
+                <div class="floating-card-badge" aria-hidden="true">
+                  <i class="fa-solid fa-shield-heart"></i>
+                </div>
+                <div>
+                  <div class="floating-card-title">KATIHA JI PHARMA</div>
+                  <div class="floating-card-sub">322, Katiha Chowk, Gulab Nagar, Bareilly – 243003</div>
+                </div>
+              </div>
+              <a href="tel:8881063439" class="btn btn-primary btn-sm" aria-label="Call 8881063439">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                <span>Call</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         D. ABOUT US SECTION
+         ====================================================================== -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="about-media reveal">
+          <div class="about-img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1576602976047-174e57a47881?auto=format&fit=crop&w=900&q=80"
+              alt="Professional pharmaceutical organization and healthcare consultation environment"
+              loading="lazy"
+              onerror="this.src='https://placehold.co/800x700/E6F4F0/12352D?text=About+KATIHA+JI+PHARMA'"
+            />
+          </div>
+          <div class="about-proprietor-card">
+            <div>
+              <div class="about-proprietor-label">Registered Proprietor</div>
+              <div class="about-proprietor-name">SATYA BHAN KATIHA</div>
+            </div>
+            <span class="about-constitution-tag">Proprietorship Firm</span>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Corporate Profile</span>
+          </span>
+          <h2>About KATIHA JI PHARMA</h2>
+          <p>
+            <strong>KATIHA JI PHARMA</strong> is a professionally registered proprietorship business established in <strong>Bareilly, Uttar Pradesh</strong>. Operated under the legal proprietorship of <strong>SATYA BHAN KATIHA</strong>, the enterprise is situated at 322, Katiha Chowk, Gulab Nagar, Bareilly – 243003.
+          </p>
+          <p>
+            Our business identity is built on clear communication, verifiable registration credentials, and a disciplined, customer-oriented approach to pharmaceutical commerce. Whether serving local visitors, healthcare consumers, or prospective trade associates, we prioritize accountability and transparent business practices in every interaction.
+          </p>
+          <div class="about-highlights">
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+              <span>GST Registered Enterprise</span>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+              <span>Bareilly Local Presence</span>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+              <span>Responsible Operations</span>
+            </div>
+            <div class="about-highlight-item">
+              <i class="fa-solid fa-check-circle" aria-hidden="true"></i>
+              <span>Direct Proprietor Oversight</span>
+            </div>
+          </div>
+          <a href="#business-info" class="btn btn-secondary">
+            <i class="fa-solid fa-id-card" aria-hidden="true"></i>
+            <span>View Verified Business Details</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         E. OUR SERVICES SECTION
+         ====================================================================== -->
+    <section class="section section-light" id="services">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-hand-holding-medical" aria-hidden="true"></i>
+            <span>Areas of Focus</span>
+          </span>
+          <h2 class="section-title">Our Services</h2>
+          <p class="section-subtitle">
+            Structured pharmaceutical business categories designed to assist local customers, healthcare visitors, and commercial partners in Bareilly.
+          </p>
+        </div>
+
+        <div class="service-notice reveal" role="note">
+          <i class="fa-solid fa-circle-exclamation" aria-hidden="true"></i>
+          <span>
+            <strong>Informational Overview:</strong> The categories below represent general business areas and enquiry channels offered by KATIHA JI PHARMA. Please contact our Bareilly location directly via phone or email to confirm specific availability or requirements.
+          </span>
+        </div>
+
+        <div class="cards-grid-3">
+          <!-- Card 1 -->
+          <article class="service-card reveal">
+            <div class="card-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-capsules"></i>
+            </div>
+            <h3>Pharmaceutical Products</h3>
+            <p>
+              Dedicated focus on standard pharmaceutical lines and healthcare formulations handled with structured storage awareness and responsible business standards.
+            </p>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="service-card reveal">
+            <div class="card-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-user-nurse"></i>
+            </div>
+            <h3>Pharmacy Assistance</h3>
+            <p>
+              Courteous, attentive front-desk guidance to help visitors navigate their pharmacy-related enquiries clearly and respectfully.
+            </p>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="service-card reveal">
+            <div class="card-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-kit-medical"></i>
+            </div>
+            <h3>Healthcare Essentials</h3>
+            <p>
+              Support for everyday wellness and general healthcare essentials tailored to the routine needs of households and community members in Bareilly.
+            </p>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="service-card reveal">
+            <div class="card-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3>Customer Support</h3>
+            <p>
+              Accessible telephone and email communication channels so customers and partners can reach KATIHA JI PHARMA without unnecessary delays.
+            </p>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="service-card reveal">
+            <div class="card-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-file-medical"></i>
+            </div>
+            <h3>Product Information</h3>
+            <p>
+              Clear, factual responses regarding general product inquiries and packaging details, while always encouraging consultation with qualified medical practitioners.
+            </p>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="service-card reveal">
+            <div class="card-icon-box" aria-hidden="true">
+              <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3>General Pharmacy Enquiries</h3>
+            <p>
+              Welcoming general consumer questions, local availability checks, and B2B trade introductions at our Katiha Chowk, Gulab Nagar office.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         F. WHY CHOOSE US SECTION
+         ====================================================================== -->
+    <section class="section" id="why-choose-us">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-award" aria-hidden="true"></i>
+            <span>Our Core Pillars</span>
+          </span>
+          <h2 class="section-title">Why Choose KATIHA JI PHARMA</h2>
+          <p class="section-subtitle">
+            We combine verifiable statutory registration with approachable local service in Bareilly, Uttar Pradesh.
+          </p>
+        </div>
+
+        <div class="cards-grid-3">
+          <div class="why-card reveal">
+            <div class="why-card-header">
+              <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-certificate"></i></div>
+              <h3>Registered Business Identity</h3>
+            </div>
+            <p>
+              Operating transparently as a GST-registered proprietorship under legal proprietor SATYA BHAN KATIHA (GSTIN: 09AGVPK9704G1ZT).
+            </p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-header">
+              <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-map-location-dot"></i></div>
+              <h3>Local Business Presence</h3>
+            </div>
+            <p>
+              Established physical presence at 322, Katiha Chowk, Gulab Nagar, Bareilly, providing dependable accessibility for local residents and partners.
+            </p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-header">
+              <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-users"></i></div>
+              <h3>Customer-Focused Approach</h3>
+            </div>
+            <p>
+              Every visitor and enquiry is treated with patience, dignity, and clarity to build lasting community trust.
+            </p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-header">
+              <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-handshake"></i></div>
+              <h3>Professional Communication</h3>
+            </div>
+            <p>
+              Clear, accurate, and straightforward responses whether you connect with us in person, over the phone, or via email.
+            </p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-header">
+              <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-eye"></i></div>
+              <h3>Transparent Business Information</h3>
+            </div>
+            <p>
+              Publicly verifiable legal name, business constitution, GST identification, and complete postal address with zero ambiguity.
+            </p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-card-header">
+              <div class="why-icon" aria-hidden="true"><i class="fa-solid fa-phone-volume"></i></div>
+              <h3>Convenient Contact Options</h3>
+            </div>
+            <p>
+              Multiple direct ways to connect—including one-tap calling, email correspondence, and Google Maps navigation to our premises.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         G. BUSINESS INFORMATION SECTION
+         ====================================================================== -->
+    <section class="section section-light" id="business-info">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-building-columns" aria-hidden="true"></i>
+            <span>Official Credentials</span>
+          </span>
+          <h2 class="section-title">Business Information</h2>
+          <p class="section-subtitle">
+            Verified corporate registration and tax identification profile for KATIHA JI PHARMA.
+          </p>
+        </div>
+
+        <div class="profile-card reveal">
+          <div class="profile-card-banner">
+            <div>
+              <h3 class="profile-banner-title">KATIHA JI PHARMA</h3>
+              <p class="profile-banner-sub">Official Proprietorship Registration Profile • Bareilly, Uttar Pradesh</p>
+            </div>
+            <div class="verified-status-badge">
+              <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
+              <span>GST Registered Entity</span>
+            </div>
+          </div>
+
+          <div class="profile-grid">
+            <div class="profile-field">
+              <span class="profile-label"><i class="fa-solid fa-store" aria-hidden="true"></i> Business Name</span>
+              <div class="profile-value">KATIHA JI PHARMA</div>
+            </div>
+
+            <div class="profile-field">
+              <span class="profile-label"><i class="fa-solid fa-user-tie" aria-hidden="true"></i> Legal Name</span>
+              <div class="profile-value">SATYA BHAN KATIHA</div>
+            </div>
+
+            <div class="profile-field">
+              <span class="profile-label"><i class="fa-solid fa-briefcase" aria-hidden="true"></i> Business Constitution</span>
+              <div class="profile-value">Proprietorship</div>
+            </div>
+
+            <div class="profile-field">
+              <span class="profile-label"><i class="fa-solid fa-file-invoice-dollar" aria-hidden="true"></i> GSTIN</span>
+              <div class="profile-value-row">
+                <span class="profile-value gstin-mono" id="gstinText">09AGVPK9704G1ZT</span>
+                <button type="button" class="copy-btn" data-copy="09AGVPK9704G1ZT" aria-label="Copy GSTIN to clipboard">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                  <span>Copy GSTIN</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="profile-field full-span">
+              <span class="profile-label"><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Registered Business Address</span>
+              <div class="profile-value-row">
+                <span class="profile-value">322, KATIHA CHOWK, GULAB NAGAR, BAREILLY, UTTAR PRADESH – 243003.</span>
+                <button type="button" class="copy-btn" data-copy="322, KATIHA CHOWK, GULAB NAGAR, BAREILLY, UTTAR PRADESH - 243003, INDIA" aria-label="Copy Business Address to clipboard">
+                  <i class="fa-regular fa-copy" aria-hidden="true"></i>
+                  <span>Copy Address</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         H. LOCATION SECTION
+         ====================================================================== -->
+    <section class="section" id="location">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-map-pin" aria-hidden="true"></i>
+            <span>Find Us in Bareilly</span>
+          </span>
+          <h2 class="section-title">Our Location</h2>
+          <p class="section-subtitle">
+            Conveniently situated at Katiha Chowk in Gulab Nagar, Bareilly, Uttar Pradesh.
+          </p>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-card reveal">
+            <div>
+              <div class="location-pin-badge" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <h3>KATIHA JI PHARMA</h3>
+              <p style="color: var(--color-muted); font-size: 0.94rem;">
+                Visit or navigate directly to our registered business address in Bareilly using Google Maps.
+              </p>
+
+              <div class="location-address-box">
+                <p>
+                  322, Katiha Chowk,<br />
+                  Gulab Nagar,<br />
+                  Bareilly, Uttar Pradesh – 243003, India.
+                </p>
+              </div>
+
+              <ul class="location-meta-list">
+                <li>
+                  <i class="fa-solid fa-city" aria-hidden="true"></i>
+                  <span>City / District: Bareilly, Uttar Pradesh</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-envelope-open-text" aria-hidden="true"></i>
+                  <span>Postal PIN Code: 243003</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                  <span>Direct Line: <a href="tel:8881063439" style="color: var(--color-primary); font-weight: 600;">8881063439</a></span>
+                </li>
+              </ul>
+            </div>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=322%2C+Katiha+Chowk%2C+Gulab+Nagar%2C+Bareilly%2C+Uttar+Pradesh+243003%2C+India"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary"
+              style="width: 100%;"
+            >
+              <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+              <span>Get Directions on Google Maps</span>
+            </a>
+          </div>
+
+          <div class="map-container reveal">
+            <iframe
+              title="Google Map showing 322, Katiha Chowk, Gulab Nagar, Bareilly, Uttar Pradesh 243003, India"
+              src="https://maps.google.com/maps?q=322%2C%20Katiha%20Chowk%2C%20Gulab%20Nagar%2C%20Bareilly%2C%20Uttar%20Pradesh%20243003%2C%20India&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         I. CONTACT SECTION
+         ====================================================================== -->
+    <section class="section section-light" id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i>
+            <span>Get In Touch</span>
+          </span>
+          <h2 class="section-title">Contact Us</h2>
+          <p class="section-subtitle">
+            Have a question for KATIHA JI PHARMA? Connect with us directly via phone, email, or the enquiry form below.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Direct Contact Cards -->
+          <div class="contact-methods reveal">
+            <div class="contact-method-card">
+              <div class="contact-method-icon" aria-hidden="true">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <div>
+                <div class="contact-method-label">Phone Number</div>
+                <div class="contact-method-value">
+                  <a href="tel:8881063439">8881063439</a>
+                </div>
+                <a href="tel:8881063439" class="contact-method-action">
+                  <span>Tap to Call Now</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="contact-method-icon" aria-hidden="true">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="contact-method-label">Email Address</div>
+                <div class="contact-method-value">
+                  <a href="mailto:main@rajatdhanda.online">main@rajatdhanda.online</a>
+                </div>
+                <a href="mailto:main@rajatdhanda.online" class="contact-method-action">
+                  <span>Send Direct Email</span>
+                  <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-method-card">
+              <div class="contact-method-icon" aria-hidden="true">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="contact-method-label">Business Address</div>
+                <div class="contact-method-value" style="font-size: 0.98rem; line-height: 1.55;">
+                  322, Katiha Chowk, Gulab Nagar, Bareilly, Uttar Pradesh – 243003.
+                </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=322%2C+Katiha+Chowk%2C+Gulab+Nagar%2C+Bareilly%2C+Uttar+Pradesh+243003%2C+India"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="contact-method-action"
+                >
+                  <span>Open Google Maps Directions</span>
+                  <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-method-card" style="background: var(--color-dark); color: var(--color-white); border-color: var(--color-dark);">
+              <div class="contact-method-icon" style="background: rgba(94, 234, 212, 0.15); color: #5EEAD4;" aria-hidden="true">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <div>
+                <div class="contact-method-label" style="color: #CCFBF1;">Proprietorship &amp; GSTIN</div>
+                <div class="contact-method-value" style="color: var(--color-white); font-size: 0.96rem;">
+                  SATYA BHAN KATIHA<br />
+                  <span style="font-family: monospace; color: #5EEAD4;">09AGVPK9704G1ZT</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="contact-form-card reveal">
+            <h3>Send an Enquiry</h3>
+            <p class="contact-form-sub">
+              Complete the form below to validate your enquiry and prepare a message for KATIHA JI PHARMA.
+            </p>
+
+            <form id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group" id="groupName">
+                  <label for="fullName" class="form-label">Full Name <span>*</span></label>
+                  <input type="text" id="fullName" name="fullName" class="form-control" placeholder="Enter your full name" required autocomplete="name" />
+                  <div class="field-error" id="errorName">Please enter your full name (at least 2 characters).</div>
+                </div>
+
+                <div class="form-group" id="groupPhone">
+                  <label for="phoneNumber" class="form-label">Phone Number <span>*</span></label>
+                  <input type="tel" id="phoneNumber" name="phoneNumber" class="form-control" placeholder="e.g. 9876543210" required autocomplete="tel" />
+                  <div class="field-error" id="errorPhone">Please enter a valid 10-digit phone number.</div>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group" id="groupEmail">
+                  <label for="emailAddress" class="form-label">Email Address <span>*</span></label>
+                  <input type="email" id="emailAddress" name="emailAddress" class="form-control" placeholder="you@example.com" required autocomplete="email" />
+                  <div class="field-error" id="errorEmail">Please enter a valid email address.</div>
+                </div>
+
+                <div class="form-group" id="groupSubject">
+                  <label for="subject" class="form-label">Subject <span>*</span></label>
+                  <input type="text" id="subject" name="subject" class="form-control" placeholder="General Enquiry / Product Info" required />
+                  <div class="field-error" id="errorSubject">Please enter a subject for your message.</div>
+                </div>
+              </div>
+
+              <div class="form-group" id="groupMessage">
+                <label for="message" class="form-label">Message <span>*</span></label>
+                <textarea id="message" name="message" class="form-control" placeholder="Write your enquiry for KATIHA JI PHARMA..." required></textarea>
+                <div class="field-error" id="errorMessage">Please enter a message (at least 10 characters).</div>
+              </div>
+
+              <p class="form-disclaimer-note">
+                By submitting this form, you acknowledge our <button type="button" class="open-legal-trigger" data-doc="privacy" style="background:none;border:none;color:var(--color-primary);font-weight:600;text-decoration:underline;cursor:pointer;padding:0;">Privacy Policy</button>. Please do not share sensitive personal medical records through web forms.
+              </p>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span>Validate &amp; Prepare Enquiry</span>
+              </button>
+            </form>
+
+            <!-- Transparent Frontend Validation & Delivery Explanation Box -->
+            <div class="form-feedback" id="formFeedback" role="status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         FAQ ACCORDION SECTION (STRICTLY FACTUAL BUSINESS FAQS)
+         ====================================================================== -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">
+            <i class="fa-solid fa-circle-question" aria-hidden="true"></i>
+            <span>Common Questions</span>
+          </span>
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">
+            Quick answers regarding our business registration, location, and contact channels in Bareilly.
+          </p>
+        </div>
+
+        <div class="faq-list reveal">
+          <div class="faq-item active">
+            <button type="button" class="faq-question" aria-expanded="true">
+              <span>Where is KATIHA JI PHARMA located?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </button>
-            <nav class="nav-links" id="nav-links">
-                <a href="#home">Home</a>
-                <a href="#about">About</a>
-                <a href="#products">Products & Services</a>
-                <a href="#why-us">Why Choose Us</a>
-                <a href="#contact">Contact</a>
-            </nav>
+            <div class="faq-answer" style="max-height: 220px;">
+              <div class="faq-answer-inner">
+                KATIHA JI PHARMA is located at 322, Katiha Chowk, Gulab Nagar, Bareilly, Uttar Pradesh – 243003, India. You can use the Google Maps link in our Location section for turn-by-turn directions.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>What is the legal constitution and GSTIN of KATIHA JI PHARMA?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                KATIHA JI PHARMA is a registered Proprietorship business legally registered under the name of proprietor <strong>SATYA BHAN KATIHA</strong>, with Goods and Services Tax Identification Number (GSTIN) <strong>09AGVPK9704G1ZT</strong>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>How can I contact KATIHA JI PHARMA directly?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                You can call us directly at <a href="tel:8881063439" style="color: var(--color-primary); font-weight: 600;">8881063439</a> or email us at <a href="mailto:main@rajatdhanda.online" style="color: var(--color-primary); font-weight: 600;">main@rajatdhanda.online</a> for general pharmacy enquiries, product information requests, or business communications.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              <span>Does this website accept online medicine orders or provide medical prescriptions?</span>
+              <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner">
+                No. This website serves as the official corporate informational portal for KATIHA JI PHARMA. It is not an e-commerce platform and does not provide medical diagnosis or prescriptions. Always consult a qualified healthcare professional for medical advice.
+              </div>
+            </div>
+          </div>
         </div>
-    </header>
+      </div>
+    </section>
+  </main>
 
-    <main>
-        <!-- HERO SECTION -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i data-lucide="shield-check" style="width:16px; height:16px;"></i> Fresh & Reliable Dairy
-                </div>
-                <h1>Freshness You Can Trust, Quality You Can Taste</h1>
-                <p>Sudha Milk Business is dedicated to distributing fresh milk and essential dairy products. We prioritize reliable service, consistent quality, and complete customer satisfaction in every delivery.</p>
-                <div class="hero-btns">
-                    <a href="#contact" class="btn btn-primary">Contact Us <i data-lucide="arrow-right"></i></a>
-                    <a href="#products" class="btn btn-secondary">Explore Services</a>
-                </div>
+  <!-- ========================================================================
+       6. MULTI-COLUMN FOOTER SECTION
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: Brand Information -->
+        <div>
+          <div class="brand-logo">
+            <div class="brand-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.5 3.5C9.5 2.94772 9.94772 2.5 10.5 2.5H13.5C14.0523 2.5 14.5 2.94772 14.5 3.5V9.5H20.5C21.0523 9.5 21.5 9.94772 21.5 10.5V13.5C21.5 14.0523 21.0523 14.5 20.5 14.5H14.5V20.5C14.5 21.0523 14.0523 21.5 13.5 21.5H10.5C9.94772 21.5 9.5 21.0523 9.5 20.5V14.5H3.5C2.94772 14.5 2.5 14.0523 2.5 13.5V10.5C2.5 9.94772 2.94772 9.5 3.5 9.5H9.5V3.5Z" fill="white"/>
+                <circle cx="12" cy="12" r="2.2" fill="#087F5B"/>
+              </svg>
             </div>
-            <div class="hero-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&q=80&w=800" alt="Fresh milk glass and pitcher on farm background" loading="lazy">
+            <div>
+              <div class="footer-brand-name">KATIHA JI PHARMA</div>
+              <div class="footer-brand-sub">Proprietorship • Bareilly, UP</div>
             </div>
-        </section>
-
-        <!-- ABOUT US SECTION -->
-        <section id="about">
-            <div class="about-grid">
-                <div class="hero-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1527153857715-3908f2bae5e8?auto=format&fit=crop&q=80&w=800" alt="Dairy supply and fresh milk bottle" loading="lazy">
-                </div>
-                <div class="about-content">
-                    <div class="section-subtitle">About Sudha Milk Business</div>
-                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Committed to Dairy Freshness & Local Dependability</h2>
-                    <p>Operating out of Manalur, Sivaganga, Sudha Milk Business focuses on supplying fresh milk and daily dairy solutions. Our goal is simple: deliver safe, wholesome dairy products with prompt, customer-centered service.</p>
-                    <p>We work diligently to ensure that our supply chain maintains optimum product integrity, making us a dependable local partner for everyday dairy needs.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- PRODUCTS / SERVICES SECTION -->
-        <section id="products">
-            <div class="section-header">
-                <div class="section-subtitle">Our Offerings</div>
-                <h2 class="section-title">Products & Services</h2>
-            </div>
-            <div class="cards-grid">
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&q=80&w=600" alt="Fresh Milk Supply" class="card-img" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Fresh Milk</h3>
-                        <p class="card-text">Daily sourcing and timely delivery of fresh, natural milk handled with precise hygiene standards.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1628088062854-d1870b4553da?auto=format&fit=crop&q=80&w=600" alt="Dairy Products" class="card-img" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Dairy Products</h3>
-                        <p class="card-text">Essential wholesale and retail dairy goods supplied with strict temperature control and freshness preserved.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1528750997573-59b89d66f4f7?auto=format&fit=crop&q=80&w=600" alt="Milk Supply Logistics" class="card-img" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Milk Supply</h3>
-                        <p class="card-text">Consistent and scheduled milk delivery services tailored to local households and business requirements.</p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="https://images.unsplash.com/photo-1600788886242-5c96aabe3757?auto=format&fit=crop&q=80&w=600" alt="Wholesale Dairy Distribution" class="card-img" loading="lazy">
-                    <div class="card-body">
-                        <h3 class="card-title">Dairy Distribution</h3>
-                        <p class="card-text">Efficient fulfillment networks ensuring retail outlets and local vendors get fresh inventory without delay.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- WHY CHOOSE US -->
-        <section id="why-us">
-            <div class="section-header">
-                <div class="section-subtitle">Why Partner With Us</div>
-                <h2 class="section-title">Excellence in Every Drop</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="check-circle"></i></div>
-                    <h3>Quality Focus</h3>
-                    <p>We maintain meticulous standard checks to ensure purity and taste in every transaction.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="leaf"></i></div>
-                    <h3>Fresh Dairy Products</h3>
-                    <p>Sourced and handled quickly so product fresh-flavor remains intact upon arrival.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="truck"></i></div>
-                    <h3>Reliable Service</h3>
-                    <p>Dependable schedule systems that ensure you never run out of essential dairy supplies.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="smile"></i></div>
-                    <h3>Customer Satisfaction</h3>
-                    <p>Dedicated local assistance ensuring prompt responses to custom orders and inquiries.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="briefcase"></i></div>
-                    <h3>Professional Approach</h3>
-                    <p>Standardized, reliable operational handling for residential and bulk commercial orders.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon"><i data-lucide="phone"></i></div>
-                    <h3>Convenient Communication</h3>
-                    <p>Direct lines of communication via mobile and email for quick assistance and updates.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- QUALITY / FRESHNESS HIGHLIGHT -->
-        <section>
-            <div class="about-grid">
-                <div class="about-content">
-                    <div class="section-subtitle">Cleanliness & Standards</div>
-                    <h2 class="section-title" style="margin-bottom: 1.5rem;">Quality • Freshness • Trust</h2>
-                    <p>Our operation prioritizes sanitation, cold chain handling, and seamless logistics. We believe trust is built over time through steady product quality and upfront customer care.</p>
-                </div>
-                <div class="hero-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1559598467-f8b76c8155d0?auto=format&fit=crop&q=80&w=800" alt="Pouring fresh milk" loading="lazy">
-                </div>
-            </div>
-        </section>
-
-        <!-- CALL TO ACTION BANNER -->
-        <section>
-            <div class="cta-banner">
-                <h2>Looking for Quality Dairy Products?</h2>
-                <p>Get in touch with Sudha Milk Business today to discuss daily logistics or place bulk inquiries.</p>
-                <a href="#contact" class="btn btn-primary">Contact Us</a>
-            </div>
-        </section>
-
-        <!-- CONTACT SECTION -->
-        <section id="contact">
-            <div class="section-header">
-                <div class="section-subtitle">Reach Out</div>
-                <h2 class="section-title">Contact Information</h2>
-            </div>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>Sudha Milk Business</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 2rem;">Feel free to contact us by phone or email for any business or supply inquiries.</p>
-                    
-                    <div class="info-item">
-                        <div class="info-icon"><i data-lucide="map-pin"></i></div>
-                        <div class="info-text">
-                            <h4>Address</h4>
-                            <p>Kazhugerkadai Road, 9/51, Ward 9, Manalur, N/A, Sivaganga, Tamil Nadu – 630611, India</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"><i data-lucide="phone"></i></div>
-                        <div class="info-text">
-                            <h4>Mobile</h4>
-                            <p>+91 8881063436</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="info-icon"><i data-lucide="mail"></i></div>
-                        <div class="info-text">
-                            <h4>Email</h4>
-                            <p>Sudhamurugan1981@gmail.com</p>
-                        </div>
-                    </div>
-
-                    <div class="contact-actions">
-                        <a href="tel:+918881063436" class="btn btn-primary"><i data-lucide="phone-call"></i> Call Now</a>
-                        <a href="mailto:Sudhamurugan1981@gmail.com" class="btn btn-secondary"><i data-lucide="mail"></i> Email Us</a>
-                    </div>
-                </div>
-
-                <div class="contact-card" style="display: flex; flex-direction: column; justify-content: center; background: linear-gradient(135deg, var(--bg-card), var(--green-primary));">
-                    <i data-lucide="milk" style="width: 64px; height: 64px; color: var(--green-accent); margin-bottom: 1.5rem;"></i>
-                    <h3 style="font-size: 1.5rem; margin-bottom: 1rem;">Daily Fresh Dairy Supply</h3>
-                    <p style="color: var(--text-muted);">Whether you require daily household fulfillment or regional wholesale options, Sudha Milk Business provides dependable services across Sivaganga.</p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <div class="logo" style="margin-bottom: 1rem;">
-                    <i data-lucide="milk" class="logo-icon"></i>
-                    Sudha Milk Business
-                </div>
-                <p>Delivering quality milk and fresh dairy products with absolute dedication to hygiene, local trust, and timeliness.</p>
-            </div>
-            <div class="footer-col footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#products">Products / Services</a></li>
-                    <li><a href="#why-us">Why Choose Us</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Info</h4>
-                <p><strong>Mobile:</strong> +91 8881063436</p>
-                <p><strong>Email:</strong> Sudhamurugan1981@gmail.com</p>
-                <p><strong>Address:</strong> Kazhugerkadai Road, 9/51, Ward 9, Manalur, N/A, Sivaganga, Tamil Nadu – 630611, India</p>
-            </div>
-            <div class="footer-col footer-links">
-                <h4>Legal</h4>
-                <ul>
-                    <li><a href="#" id="open-privacy">Privacy Policy</a></li>
-                    <li><a href="#" id="open-terms">Terms and Conditions</a></li>
-                    <li><a href="#" id="open-cookies">Cookies Policy</a></li>
-                </ul>
-            </div>
+          </div>
+          <p class="footer-desc">
+            A registered proprietorship pharmaceutical business based in Bareilly, Uttar Pradesh, committed to professionalism, reliability, and transparent customer service.
+          </p>
+          <div class="footer-gst-pill">
+            GSTIN: 09AGVPK9704G1ZT
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Sudha Milk Business. All Rights Reserved.</p>
-        </div>
-    </footer>
 
-    <!-- MODAL FRAMEWORK -->
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="modal-box">
-            <div class="modal-header">
-                <h3 id="modal-title" style="color: var(--text-light);">Policy Information</h3>
-                <button class="modal-close" id="modal-close-btn"><i data-lucide="x"></i></button>
-            </div>
-            <div class="modal-body" id="modal-body">
-                <!-- Dynamic Content Loaded Here -->
-            </div>
+        <!-- Column 2: Quick Links -->
+        <div>
+          <h3 class="footer-heading">Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-choose-us">Why Choose Us</a></li>
+            <li><a href="#business-info">Business Information</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
         </div>
+
+        <!-- Column 3: Contact Information -->
+        <div>
+          <h3 class="footer-heading">Contact Information</h3>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              <a href="tel:8881063439">8881063439</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:main@rajatdhanda.online">main@rajatdhanda.online</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <span>322, KATIHA CHOWK, GULAB NAGAR, BAREILLY, UTTAR PRADESH – 243003, INDIA.</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-user-check" aria-hidden="true"></i>
+              <span>Proprietor: SATYA BHAN KATIHA</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Legal -->
+        <div>
+          <h3 class="footer-heading">Legal</h3>
+          <ul class="footer-links">
+            <li>
+              <button type="button" class="footer-legal-btn open-legal-trigger" data-doc="privacy">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <span>Privacy Policy</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="footer-legal-btn open-legal-trigger" data-doc="terms">
+                <i class="fa-solid fa-file-contract" aria-hidden="true"></i>
+                <span>Terms and Conditions</span>
+              </button>
+            </li>
+            <li>
+              <button type="button" class="footer-legal-btn open-legal-trigger" data-doc="disclaimer">
+                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+                <span>Disclaimer</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="copyrightYear">2026</span> KATIHA JI PHARMA. All Rights Reserved.</p>
+        <p>Legal Name: SATYA BHAN KATIHA | Bareilly, Uttar Pradesh, India</p>
+      </div>
     </div>
+  </footer>
 
-    <!-- COOKIE CONSENT BANNER -->
-    <div class="cookie-banner" id="cookie-banner">
-        <p>We use cookies to enhance website functionality and user experience. By browsing, you agree to our cookie usage policies.</p>
-        <div class="cookie-btns">
-            <button class="btn btn-primary" id="accept-cookies">Accept</button>
-            <button class="btn btn-secondary" id="decline-cookies">Decline</button>
-            <button class="btn btn-secondary" id="banner-open-cookies">Cookie Policy</button>
+  <!-- ========================================================================
+       7 & 8. FULL LEGAL DOCUMENTS MODAL (PRIVACY POLICY, TERMS, DISCLAIMER)
+       ======================================================================== -->
+  <div class="legal-modal-overlay" id="legalModal" role="dialog" aria-modal="true" aria-labelledby="legalModalHeading">
+    <div class="legal-modal-box">
+      <div class="legal-modal-header">
+        <div class="legal-modal-title-group">
+          <h2 id="legalModalHeading">Privacy Policy</h2>
+          <p>KATIHA JI PHARMA (Proprietor: SATYA BHAN KATIHA) • Bareilly, Uttar Pradesh</p>
         </div>
+        <button type="button" class="legal-modal-close" id="closeLegalModal" aria-label="Close legal document">
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <div class="legal-modal-tabs" role="tablist" aria-label="Legal Documents">
+        <button type="button" class="legal-tab-btn active" role="tab" aria-selected="true" data-tab="privacy">Privacy Policy</button>
+        <button type="button" class="legal-tab-btn" role="tab" aria-selected="false" data-tab="terms">Terms &amp; Conditions</button>
+        <button type="button" class="legal-tab-btn" role="tab" aria-selected="false" data-tab="disclaimer">Medical &amp; Business Disclaimer</button>
+      </div>
+
+      <div class="legal-modal-body" id="legalModalBody">
+        <!-- PRIVACY POLICY (All 11 Required Sections) -->
+        <article class="legal-doc-section active" id="doc-privacy">
+          <h3>1. Introduction</h3>
+          <p>
+            Welcome to the official website of <strong>KATIHA JI PHARMA</strong>, a proprietorship business legally registered under <strong>SATYA BHAN KATIHA</strong> and located at 322, Katiha Chowk, Gulab Nagar, Bareilly, Uttar Pradesh – 243003, India. We respect the privacy of visitors who browse our website or contact us for business enquiries. This Privacy Policy explains how information is handled when you interact with this website.
+          </p>
+
+          <h3>2. Information We Collect</h3>
+          <p>
+            This website is primarily informational and does not require user registration or account creation. We only receive personal information that you voluntarily choose to provide when contacting us via telephone, email, or the website contact form—such as your full name, email address, phone number, subject, and enquiry message.
+          </p>
+
+          <h3>3. Information Provided Through Contact Forms</h3>
+          <p>
+            When you enter details into our website contact form, the information is validated within your browser to help prepare an enquiry message. Visitors are requested not to submit confidential medical histories, sensitive personal data, or financial account numbers through general contact forms.
+          </p>
+
+          <h3>4. How Information Is Used</h3>
+          <p>Information voluntarily shared with KATIHA JI PHARMA may be used strictly for:</p>
+          <ul>
+            <li>Responding to your general pharmacy or business enquiries;</li>
+            <li>Communicating with prospective customers, visitors, or trade partners;</li>
+            <li>Maintaining basic correspondence records necessary for business communication.</li>
+          </ul>
+
+          <h3>5. Data Protection and Security</h3>
+          <p>
+            We take reasonable administrative care when handling business correspondence received via email or phone. However, no method of electronic transmission over the internet is completely immune from risk, and this informational website does not claim specialized third-party cybersecurity certifications or automated encrypted database storage.
+          </p>
+
+          <h3>6. Cookies and Website Analytics</h3>
+          <p>
+            This standalone website does not deploy invasive advertising trackers or behavioral profiling cookies. Standard web browsers or hosting infrastructure may temporarily process basic technical request logs (such as IP address or browser type) solely for standard page delivery and security.
+          </p>
+
+          <h3>7. Third-Party Services</h3>
+          <p>
+            Our website includes external links and embeds for convenience, including Google Maps (to display our Bareilly address and provide directions), Google Fonts, and Font Awesome icon libraries. Interactions with third-party services such as Google Maps are governed by the respective privacy policies of those providers.
+          </p>
+
+          <h3>8. Data Retention</h3>
+          <p>
+            Enquiries received via email or telephone are retained only for as long as reasonably necessary to address your request, maintain standard business correspondence, or comply with applicable Indian commercial laws.
+          </p>
+
+          <h3>9. User Rights</h3>
+          <p>
+            You may contact KATIHA JI PHARMA at any time to inquire about, update, or request deletion of prior enquiry correspondence you have sent to us via email or phone.
+          </p>
+
+          <h3>10. Policy Updates</h3>
+          <p>
+            KATIHA JI PHARMA reserves the right to revise or update this Privacy Policy periodically to reflect updates to website functionality or applicable Indian regulations. Any revisions will be reflected directly on this page.
+          </p>
+
+          <h3>11. Contact Information</h3>
+          <p>For questions regarding this Privacy Policy, please contact:</p>
+          <div class="legal-contact-card">
+            <strong>KATIHA JI PHARMA</strong><br />
+            Legal Name: SATYA BHAN KATIHA (Proprietorship)<br />
+            GSTIN: 09AGVPK9704G1ZT<br />
+            Address: 322, KATIHA CHOWK, GULAB NAGAR, BAREILLY, UTTAR PRADESH – 243003, INDIA.<br />
+            Phone: <a href="tel:8881063439" style="color:var(--color-primary);font-weight:600;">8881063439</a><br />
+            Email: <a href="mailto:main@rajatdhanda.online" style="color:var(--color-primary);font-weight:600;">main@rajatdhanda.online</a>
+          </div>
+        </article>
+
+        <!-- TERMS AND CONDITIONS (All 12 Required Sections) -->
+        <article class="legal-doc-section" id="doc-terms">
+          <h3>1. Acceptance of Terms</h3>
+          <p>
+            By accessing and browsing the website of <strong>KATIHA JI PHARMA</strong>, you agree to comply with and be bound by these Terms and Conditions. If you do not agree with any part of these terms, please discontinue use of this website.
+          </p>
+
+          <h3>2. Website Usage</h3>
+          <p>
+            This website is provided for lawful, general informational and business communication purposes only. You agree not to misuse this website, attempt unauthorized access, or interfere with its availability or security.
+          </p>
+
+          <h3>3. Business Information</h3>
+          <p>
+            KATIHA JI PHARMA is a proprietorship business legally registered under <strong>SATYA BHAN KATIHA</strong> with GSTIN <strong>09AGVPK9704G1ZT</strong>, operating from 322, Katiha Chowk, Gulab Nagar, Bareilly, Uttar Pradesh – 243003, India.
+          </p>
+
+          <h3>4. Product Information</h3>
+          <p>
+            References to pharmaceutical products, healthcare essentials, or service categories on this website are general descriptive categories only. This website does <strong>not</strong> operate as an online pharmacy, e-commerce store, or automated ordering portal, nor does it guarantee real-time stock availability.
+          </p>
+
+          <h3>5. Accuracy of Information</h3>
+          <p>
+            While we strive to ensure that our verified business details (such as address, GSTIN, phone number, and email) are accurate and up to date, general website descriptions are provided without warranties of completeness for every individual situation. Visitors are encouraged to confirm specific details directly with us.
+          </p>
+
+          <h3>6. Intellectual Property</h3>
+          <p>
+            All original text, layout structure, branding presentation, and visual design elements created for KATIHA JI PHARMA on this website are the property of KATIHA JI PHARMA unless otherwise attributed (such as third-party icon libraries and licensed photography).
+          </p>
+
+          <h3>7. Third-Party Links</h3>
+          <p>
+            This website contains links to external services such as Google Maps for navigation convenience. KATIHA JI PHARMA does not control and is not responsible for the content, availability, or practices of external third-party websites.
+          </p>
+
+          <h3>8. Limitation of Liability</h3>
+          <p>
+            To the fullest extent permitted under Indian law, KATIHA JI PHARMA and its proprietor SATYA BHAN KATIHA shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of, or reliance upon, general information published on this website.
+          </p>
+
+          <h3>9. Medical Disclaimer</h3>
+          <p>
+            All content presented on this website is strictly for general business and informational purposes and is <strong>not</strong> a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of a qualified physician or licensed healthcare provider regarding any medical condition or medication.
+          </p>
+
+          <h3>10. Changes to Terms</h3>
+          <p>
+            KATIHA JI PHARMA may update or modify these Terms and Conditions at any time without prior notice. Continued use of the website following updates constitutes acceptance of the revised terms.
+          </p>
+
+          <h3>11. Governing Law and Jurisdiction</h3>
+          <p>
+            These Terms and Conditions shall be governed by and construed in accordance with the laws of India. Any disputes arising in connection with this website shall be subject to the exclusive jurisdiction of the competent courts in <strong>Bareilly, Uttar Pradesh, India</strong>.
+          </p>
+
+          <h3>12. Contact Information</h3>
+          <p>For any queries regarding these Terms and Conditions, please contact:</p>
+          <div class="legal-contact-card">
+            <strong>KATIHA JI PHARMA</strong><br />
+            Proprietor: SATYA BHAN KATIHA<br />
+            Address: 322, KATIHA CHOWK, GULAB NAGAR, BAREILLY, UTTAR PRADESH – 243003, INDIA.<br />
+            Phone: <a href="tel:8881063439" style="color:var(--color-primary);font-weight:600;">8881063439</a> | Email: <a href="mailto:main@rajatdhanda.online" style="color:var(--color-primary);font-weight:600;">main@rajatdhanda.online</a>
+          </div>
+        </article>
+
+        <!-- DISCLAIMER -->
+        <article class="legal-doc-section" id="doc-disclaimer">
+          <h3>General Informational Purpose</h3>
+          <p>
+            The information provided on the official website of <strong>KATIHA JI PHARMA</strong> is published in good faith for general corporate identification and informational purposes only.
+          </p>
+
+          <h3>No Online Sale or Prescription Dispensing via Website</h3>
+          <p>
+            This website is not an e-commerce portal and does not facilitate online ordering, automated payment collection, or digital prescription fulfilment. All enquiries submitted through this page are general communication requests.
+          </p>
+
+          <h3>No Medical Advice</h3>
+          <p>
+            Nothing contained on this website constitutes medical, clinical, or pharmaceutical advice. Never disregard professional medical advice or delay seeking treatment because of general information read on this website.
+          </p>
+
+          <h3>Verified Business Credentials</h3>
+          <div class="legal-contact-card">
+            <strong>Business Name:</strong> KATIHA JI PHARMA<br />
+            <strong>Legal Name:</strong> SATYA BHAN KATIHA<br />
+            <strong>Constitution:</strong> Proprietorship<br />
+            <strong>GSTIN:</strong> 09AGVPK9704G1ZT<br />
+            <strong>Address:</strong> 322, KATIHA CHOWK, GULAB NAGAR, BAREILLY, UTTAR PRADESH – 243003, INDIA.
+          </div>
+        </article>
+      </div>
+
+      <div class="legal-modal-footer">
+        <span style="font-size: 0.82rem; color: var(--color-muted);">KATIHA JI PHARMA • Bareilly, Uttar Pradesh</span>
+        <button type="button" class="btn btn-primary btn-sm" id="closeLegalModalBtn">Close Document</button>
+      </div>
     </div>
+  </div>
 
-    <!-- JAVASCRIPT LOGIC -->
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+  <!-- Back to Top Button & Toast Notification -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-        // Mobile Menu Toggle
-        const hamburgerBtn = document.getElementById('hamburger-btn');
-        const navLinks = document.getElementById('nav-links');
+  <div class="toast-notification" id="toastNotification" role="status" aria-live="polite"></div>
 
-        hamburgerBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
+  <!-- ========================================================================
+       VANILLA JAVASCRIPT FUNCTIONALITY
+       ======================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* ----------------------------------------------------------------------
+         1. Dynamic Copyright Year
+         ---------------------------------------------------------------------- */
+      const yearSpan = document.getElementById('copyrightYear');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+
+      /* ----------------------------------------------------------------------
+         2. Sticky Navbar & Back-to-Top Visibility
+         ---------------------------------------------------------------------- */
+      const navbar = document.getElementById('navbar');
+      const backToTopBtn = document.getElementById('backToTop');
+
+      function handleScrollUI() {
+        const scrollY = window.scrollY || window.pageYOffset;
+        if (navbar) {
+          navbar.classList.toggle('scrolled', scrollY > 24);
+        }
+        if (backToTopBtn) {
+          backToTopBtn.classList.toggle('visible', scrollY > 450);
+        }
+      }
+
+      window.addEventListener('scroll', handleScrollUI, { passive: true });
+      handleScrollUI();
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* ----------------------------------------------------------------------
+         3. Mobile Hamburger Menu & Overlay Drawer
+         ---------------------------------------------------------------------- */
+      const mobileOpenBtn = document.getElementById('mobileMenuOpen');
+      const mobileCloseBtn = document.getElementById('mobileMenuClose');
+      const mobileDrawer = document.getElementById('mobileDrawer');
+      const mobileBackdrop = document.getElementById('mobileBackdrop');
+      const mobileLinks = document.querySelectorAll('.mobile-nav-link, .mobile-nav-link-cta');
+
+      function openMobileMenu() {
+        if (!mobileDrawer || !mobileBackdrop) return;
+        mobileDrawer.classList.add('open');
+        mobileBackdrop.classList.add('open');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        mobileBackdrop.setAttribute('aria-hidden', 'false');
+        if (mobileOpenBtn) mobileOpenBtn.setAttribute('aria-expanded', 'true');
+        document.body.classList.add('menu-open');
+      }
+
+      function closeMobileMenu() {
+        if (!mobileDrawer || !mobileBackdrop) return;
+        mobileDrawer.classList.remove('open');
+        mobileBackdrop.classList.remove('open');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        mobileBackdrop.setAttribute('aria-hidden', 'true');
+        if (mobileOpenBtn) mobileOpenBtn.setAttribute('aria-expanded', 'false');
+        document.body.classList.remove('menu-open');
+      }
+
+      if (mobileOpenBtn) mobileOpenBtn.addEventListener('click', openMobileMenu);
+      if (mobileCloseBtn) mobileCloseBtn.addEventListener('click', closeMobileMenu);
+      if (mobileBackdrop) mobileBackdrop.addEventListener('click', closeMobileMenu);
+
+      mobileLinks.forEach(function (link) {
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      /* ----------------------------------------------------------------------
+         4. Active Navigation Highlighting on Scroll
+         ---------------------------------------------------------------------- */
+      const sections = document.querySelectorAll('main section[id]');
+      const desktopNavLinks = document.querySelectorAll('.nav-link');
+
+      function updateActiveNavLink() {
+        const scrollPosition = (window.scrollY || window.pageYOffset) + 140;
+        let currentId = 'home';
+
+        sections.forEach(function (section) {
+          const top = section.offsetTop;
+          const height = section.offsetHeight;
+          if (scrollPosition >= top && scrollPosition < top + height) {
+            currentId = section.getAttribute('id');
+          }
         });
 
-        // Close Mobile Menu on Nav Link Click
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
+        desktopNavLinks.forEach(function (link) {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === '#' + currentId) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveNavLink, { passive: true });
+      updateActiveNavLink();
+
+      /* ----------------------------------------------------------------------
+         5. Scroll Reveal Animations (Respects prefers-reduced-motion)
+         ---------------------------------------------------------------------- */
+      const revealElements = document.querySelectorAll('.reveal');
+      const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+        revealElements.forEach(function (el) {
+          el.classList.add('revealed');
+        });
+      } else {
+        const revealObserver = new IntersectionObserver(
+          function (entries, observer) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+              }
             });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -30px 0px' }
+        );
+
+        revealElements.forEach(function (el) {
+          revealObserver.observe(el);
         });
+      }
 
-        // Modal Content Definitions
-        const modalOverlay = document.getElementById('modal-overlay');
-        const modalTitle = document.getElementById('modal-title');
-        const modalBody = document.getElementById('modal-body');
-        const modalCloseBtn = document.getElementById('modal-close-btn');
+      /* ----------------------------------------------------------------------
+         6. Copy-to-Clipboard Utility for GSTIN & Business Address
+         ---------------------------------------------------------------------- */
+      const toastEl = document.getElementById('toastNotification');
+      let toastTimeout = null;
 
-        const policies = {
-            privacy: {
-                title: "Privacy Policy",
-                content: `
-                    <h4>Introduction</h4>
-                    <p>Sudha Milk Business respects your privacy. This policy outlines how we handle information gathered on our website.</p>
-                    <h4>Information We May Collect</h4>
-                    <p>We may collect basic contact information such as name, email address, and phone number when explicitly provided through direct communication.</p>
-                    <h4>How Information Is Used</h4>
-                    <p>Information collected is solely used to deliver dairy services, answer inquiries, and manage business logistics.</p>
-                    <h4>Data Security & Retention</h4>
-                    <p>We take standard non-automated and operational safeguards to secure customer information. We do not sell or rent customer details to third parties.</p>
-                    <h4>Contact Information</h4>
-                    <p>For inquiries regarding privacy, email us at Sudhamurugan1981@gmail.com.</p>
-                `
-            },
-            terms: {
-                title: "Terms and Conditions",
-                content: `
-                    <h4>Introduction</h4>
-                    <p>Welcome to the Sudha Milk Business website. By accessing this platform, you agree to comply with our terms of service.</p>
-                    <h4>Business Information & Accuracy</h4>
-                    <p>We strive to keep operational details, supply status, and contact info accurate at all times.</p>
-                    <h4>Intellectual Property</h4>
-                    <p>All brand material, logos, and visual elements belong to Sudha Milk Business.</p>
-                    <h4>Limitation of Liability</h4>
-                    <p>Sudha Milk Business is not liable for indirect damages arising from external supply chain disruptions or website downtime.</p>
-                `
-            },
-            cookies: {
-                title: "Cookie Policy",
-                content: `
-                    <h4>What Cookies Are</h4>
-                    <p>Cookies are small data files placed on your browser to remember user settings and basic platform interactions.</p>
-                    <h4>How We Use Cookies</h4>
-                    <p>We utilize simple performance and operational cookies to ensure interface consistency and store your banner preferences.</p>
-                    <h4>Managing Cookies</h4>
-                    <p>You can adjust or clear cookies at any time via your internet browser preferences.</p>
-                `
-            }
-        };
+      function showToast(message) {
+        if (!toastEl) return;
+        toastEl.textContent = message;
+        toastEl.classList.add('show');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(function () {
+          toastEl.classList.remove('show');
+        }, 2800);
+      }
 
-        function openModal(policyKey) {
-            const data = policies[policyKey];
-            if(data) {
-                modalTitle.textContent = data.title;
-                modalBody.innerHTML = data.content;
-                modalOverlay.classList.add('active');
-            }
+      function copyTextSafely(text) {
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = text;
+        tempTextarea.setAttribute('readonly', '');
+        tempTextarea.style.position = 'fixed';
+        tempTextarea.style.left = '-9999px';
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        try {
+          document.execCommand('copy');
+          showToast('Copied to clipboard: ' + text);
+        } catch (err) {
+          showToast('Unable to copy automatically. Please select and copy manually.');
         }
+        document.body.removeChild(tempTextarea);
+      }
 
-        function closeModal() {
-            modalOverlay.classList.remove('active');
+      document.querySelectorAll('.copy-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          const textToCopy = btn.getAttribute('data-copy');
+          if (textToCopy) copyTextSafely(textToCopy);
+        });
+      });
+
+      /* ----------------------------------------------------------------------
+         7. FAQ Accordion
+         ---------------------------------------------------------------------- */
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(function (item) {
+        const questionBtn = item.querySelector('.faq-question');
+        const answerDiv = item.querySelector('.faq-answer');
+        if (!questionBtn || !answerDiv) return;
+
+        questionBtn.addEventListener('click', function () {
+          const isOpen = item.classList.contains('active');
+
+          faqItems.forEach(function (otherItem) {
+            otherItem.classList.remove('active');
+            const otherBtn = otherItem.querySelector('.faq-question');
+            const otherAns = otherItem.querySelector('.faq-answer');
+            if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+            if (otherAns) otherAns.style.maxHeight = null;
+          });
+
+          if (!isOpen) {
+            item.classList.add('active');
+            questionBtn.setAttribute('aria-expanded', 'true');
+            answerDiv.style.maxHeight = answerDiv.scrollHeight + 'px';
+          }
+        });
+      });
+
+      /* ----------------------------------------------------------------------
+         8. Contact Form Validation & Transparent Submission Handling
+         ---------------------------------------------------------------------- */
+      const contactForm = document.getElementById('contactForm');
+      const formFeedback = document.getElementById('formFeedback');
+
+      const fields = {
+        fullName: {
+          input: document.getElementById('fullName'),
+          group: document.getElementById('groupName'),
+          validate: function (val) { return val.trim().length >= 2; }
+        },
+        phoneNumber: {
+          input: document.getElementById('phoneNumber'),
+          group: document.getElementById('groupPhone'),
+          validate: function (val) {
+            const digits = val.replace(/\D/g, '');
+            return digits.length >= 10 && digits.length <= 13;
+          }
+        },
+        emailAddress: {
+          input: document.getElementById('emailAddress'),
+          group: document.getElementById('groupEmail'),
+          validate: function (val) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+          }
+        },
+        subject: {
+          input: document.getElementById('subject'),
+          group: document.getElementById('groupSubject'),
+          validate: function (val) { return val.trim().length >= 3; }
+        },
+        message: {
+          input: document.getElementById('message'),
+          group: document.getElementById('groupMessage'),
+          validate: function (val) { return val.trim().length >= 10; }
         }
+      };
 
-        document.getElementById('open-privacy').addEventListener('click', (e) => { e.preventDefault(); openModal('privacy'); });
-        document.getElementById('open-terms').addEventListener('click', (e) => { e.preventDefault(); openModal('terms'); });
-        document.getElementById('open-cookies').addEventListener('click', (e) => { e.preventDefault(); openModal('cookies'); });
-        document.getElementById('banner-open-cookies').addEventListener('click', (e) => { e.preventDefault(); openModal('cookies'); });
+      function validateSingleField(key) {
+        const field = fields[key];
+        if (!field || !field.input || !field.group) return true;
+        const isValid = field.validate(field.input.value);
+        field.group.classList.toggle('has-error', !isValid);
+        field.input.classList.toggle('invalid', !isValid);
+        return isValid;
+      }
 
-        modalCloseBtn.addEventListener('click', closeModal);
-        modalOverlay.addEventListener('click', (e) => {
-            if(e.target === modalOverlay) closeModal();
-        });
-
-        // Cookie Consent Banner (LocalStorage Integration)
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptBtn = document.getElementById('accept-cookies');
-        const declineBtn = document.getElementById('decline-cookies');
-
-        window.addEventListener('load', () => {
-            const consent = localStorage.getItem('sudha_cookie_consent');
-            if(!consent) {
-                setTimeout(() => {
-                    cookieBanner.classList.add('show');
-                }, 1000);
+      Object.keys(fields).forEach(function (key) {
+        const field = fields[key];
+        if (field && field.input) {
+          field.input.addEventListener('blur', function () {
+            validateSingleField(key);
+          });
+          field.input.addEventListener('input', function () {
+            if (field.group.classList.contains('has-error')) {
+              validateSingleField(key);
             }
+          });
+        }
+      });
+
+      function escapeHTML(str) {
+        return str
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
+
+      if (contactForm && formFeedback) {
+        contactForm.addEventListener('submit', function (event) {
+          event.preventDefault();
+
+          let allValid = true;
+          Object.keys(fields).forEach(function (key) {
+            if (!validateSingleField(key)) {
+              allValid = false;
+            }
+          });
+
+          if (!allValid) {
+            formFeedback.className = 'form-feedback error show';
+            formFeedback.innerHTML =
+              '<div class="feedback-title"><i class="fa-solid fa-circle-exclamation"></i> Please Correct Highlighted Fields</div>' +
+              '<p>Kindly complete all required fields accurately before submitting your enquiry.</p>';
+            return;
+          }
+
+          const nameVal = fields.fullName.input.value.trim();
+          const phoneVal = fields.phoneNumber.input.value.trim();
+          const emailVal = fields.emailAddress.input.value.trim();
+          const subjectVal = fields.subject.input.value.trim();
+          const messageVal = fields.message.input.value.trim();
+
+          const mailtoSubject = encodeURIComponent('[Website Enquiry] ' + subjectVal + ' - ' + nameVal);
+          const mailtoBody = encodeURIComponent(
+            'Enquiry for KATIHA JI PHARMA\n' +
+            '----------------------------------------\n' +
+            'Full Name: ' + nameVal + '\n' +
+            'Phone Number: ' + phoneVal + '\n' +
+            'Email Address: ' + emailVal + '\n' +
+            'Subject: ' + subjectVal + '\n\n' +
+            'Message:\n' + messageVal + '\n'
+          );
+          const mailtoHref = 'mailto:main@rajatdhanda.online?subject=' + mailtoSubject + '&body=' + mailtoBody;
+
+          formFeedback.className = 'form-feedback success show';
+          formFeedback.innerHTML =
+            '<div class="feedback-title"><i class="fa-solid fa-circle-check" style="color:var(--color-primary);"></i> Enquiry Validated &amp; Ready to Send</div>' +
+            '<p>Thank you, <strong>' + escapeHTML(nameVal) + '</strong>. Your enquiry details have been validated successfully.</p>' +
+            '<div class="backend-notice-box">' +
+            '<strong><i class="fa-solid fa-server"></i> Delivery Notice:</strong> Because this is a static frontend website without a connected server backend or email API service, submitting this form does not automatically transmit messages over a server. Please click the button below to send your pre-filled enquiry directly using your email client, or call us at <a href="tel:8881063439" style="color:var(--color-primary);font-weight:700;">8881063439</a>.' +
+            '</div>' +
+            '<div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:10px;">' +
+            '<a href="' + mailtoHref + '" class="btn btn-primary btn-sm"><i class="fa-solid fa-envelope-open-text"></i> Open in Email App (main@rajatdhanda.online)</a>' +
+            '<a href="tel:8881063439" class="btn btn-secondary btn-sm"><i class="fa-solid fa-phone"></i> Call 8881063439</a>' +
+            '</div>';
+
+          formFeedback.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+
+      /* ----------------------------------------------------------------------
+         9. Legal Documents Modal (Privacy Policy, Terms & Conditions, Disclaimer)
+         ---------------------------------------------------------------------- */
+      const legalModal = document.getElementById('legalModal');
+      const legalModalHeading = document.getElementById('legalModalHeading');
+      const legalModalBody = document.getElementById('legalModalBody');
+      const closeLegalModalBtn1 = document.getElementById('closeLegalModal');
+      const closeLegalModalBtn2 = document.getElementById('closeLegalModalBtn');
+      const legalTabs = document.querySelectorAll('.legal-tab-btn');
+      const legalDocs = {
+        privacy: {
+          title: 'Privacy Policy',
+          el: document.getElementById('doc-privacy')
+        },
+        terms: {
+          title: 'Terms and Conditions',
+          el: document.getElementById('doc-terms')
+        },
+        disclaimer: {
+          title: 'Medical & Business Disclaimer',
+          el: document.getElementById('doc-disclaimer')
+        }
+      };
+
+      function switchLegalTab(docKey) {
+        const target = legalDocs[docKey] ? docKey : 'privacy';
+
+        legalTabs.forEach(function (tab) {
+          const isMatch = tab.getAttribute('data-tab') === target;
+          tab.classList.toggle('active', isMatch);
+          tab.setAttribute('aria-selected', isMatch ? 'true' : 'false');
         });
 
-        acceptBtn.addEventListener('click', () => {
-            localStorage.setItem('sudha_cookie_consent', 'accepted');
-            cookieBanner.classList.remove('show');
+        Object.keys(legalDocs).forEach(function (key) {
+          if (legalDocs[key].el) {
+            legalDocs[key].el.classList.toggle('active', key === target);
+          }
         });
 
-        declineBtn.addEventListener('click', () => {
-            localStorage.setItem('sudha_cookie_consent', 'declined');
-            cookieBanner.classList.remove('show');
+        if (legalModalHeading) {
+          legalModalHeading.textContent = legalDocs[target].title;
+        }
+        if (legalModalBody) {
+          legalModalBody.scrollTop = 0;
+        }
+      }
+
+      function openLegalModal(docKey) {
+        if (!legalModal) return;
+        switchLegalTab(docKey);
+        legalModal.classList.add('open');
+        document.body.classList.add('modal-open');
+        if (closeLegalModalBtn1) closeLegalModalBtn1.focus();
+      }
+
+      function closeLegalModal() {
+        if (!legalModal) return;
+        legalModal.classList.remove('open');
+        document.body.classList.remove('modal-open');
+      }
+
+      document.querySelectorAll('.open-legal-trigger').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          const docKey = trigger.getAttribute('data-doc') || 'privacy';
+          openLegalModal(docKey);
         });
-    </script>
+      });
+
+      legalTabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          switchLegalTab(tab.getAttribute('data-tab'));
+        });
+      });
+
+      if (closeLegalModalBtn1) closeLegalModalBtn1.addEventListener('click', closeLegalModal);
+      if (closeLegalModalBtn2) closeLegalModalBtn2.addEventListener('click', closeLegalModal);
+
+      if (legalModal) {
+        legalModal.addEventListener('click', function (event) {
+          if (event.target === legalModal) {
+            closeLegalModal();
+          }
+        });
+      }
+
+      /* Close Mobile Menu or Legal Modal on Escape Key */
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+          if (legalModal && legalModal.classList.contains('open')) {
+            closeLegalModal();
+          }
+          if (mobileDrawer && mobileDrawer.classList.contains('open')) {
+            closeMobileMenu();
+          }
+        }
+      });
+    })();
+  </script>
 </body>
 </html>
